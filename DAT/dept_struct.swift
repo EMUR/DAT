@@ -1,0 +1,11 @@
+//
+//  dept_struct.swift
+//  DAT
+//
+//  Created by Adib Behjat on 6/1/15.
+//  Copyright (c) 2015 Eyad_Neesha_Adeeb_Ehab. All rights reserved.
+//
+
+import Foundation
+
+var airports: [String: String] = ["ACCT" : "Accounting","ADMJ" : "Administration of Justice","ANTH" : "Anthropology","ARBC" : "Arabic","ARTS" : "Arts","ASTR" : "Astronomy","AUTO" : "Automotive Technology","BIOL" : "Biology","BUS" : "Business","CANT" : "Cantonese","CLP" : "Career Life Planning","CHEM" : "Chemistry","CDI" : "CAD &amp; Digital Imaging","CD" : "Child Development","CAOS" : "Computer Applications and Office Systems","CIS" : "Computer Information Systems","COUN" : "Counseling","DANC" : "Dance","ECON" : "Economics","EDUC" : "Education","ENGR" : "Engineering","ESL" : "English as a Second Language","ELIT" : "English-Literature","EWRT" : "English-Writing","ES" : "Environmental Studies","ESCI" : "Environmental Science","F/TV" : "Film/Television","FREN" : "French","GEO" : "Geography","GEOL" : "Geology","GERM" : "German","GUID" : "Guidance","HLTH" : "Health","HTEC" : "Health Technologies","HNDI" : "Hindi","HIST" : "History","HUMA" : "Human Development","HUMI" : "Humanities","ICS" : "Intercultural Studies","INTL" : "International Studies","ITAL" : "Italian","JAPN" : "Japanese","JOUR" : "Journalism","KORE" : "Korean","LART" : "Language Arts","LRNA" : "Learning Assistance","LIB" : "Library","LING" : "Linguistics","MAND" : "Mandarin","MATH" : "Mathematics","MET" : "Meteorology","MCNC" : "Manufacturing &amp; CNC Technologies","MUSI" : "Music","NURS" : "Nursing","NUTR" : "Nutrition","PARA" : "Paralegal Studies","POST" : "Peace Officer Standards and Training","PERS" : "Persian","PHIL" : "Philosophy","PHTG" : "Photography","PHYS" : "Physics","PE" : "Physical Education","PEA" : "Physical Education-Adapted","POLI" : "Political Science","PSYC" : "Psychology","READ" : "Reading","REST" : "Real Estate","RUSS" : "Russian","SIGN" : "Sign Language","SKIL" : "Skills","SOSC" : "Social Science","SOC" : "Sociology","SPAN" : "Spanish","SPED" : "Special Education","SPCH" : "Speech Communication","TWRT" : "Technical Writing","THEA" : "Theatre Arts","URDU" : "Urdu","VIET" : "Vietnamese","WMST" : "Women's Studies"]
