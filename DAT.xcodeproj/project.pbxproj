@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		040BF9991B1D51B400713061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9981B1D51B400713061 /* AppDelegate.swift */; };
 		040BF99C1B1D51B400713061 /* DAT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040BF99A1B1D51B400713061 /* DAT.xcdatamodeld */; };
-		040BF99E1B1D51B400713061 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF99D1B1D51B400713061 /* ViewController.swift */; };
 		040BF9A11B1D51B400713061 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040BF99F1B1D51B400713061 /* Main.storyboard */; };
 		040BF9A31B1D51B400713061 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9A21B1D51B400713061 /* Images.xcassets */; };
 		040BF9A61B1D51B400713061 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9A41B1D51B400713061 /* LaunchScreen.xib */; };
@@ -21,6 +20,7 @@
 		E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F91B1D5DBD00EB7E37 /* university_data.swift */; };
 		E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050FB1B1D640700EB7E37 /* grade_struct.swift */; };
 		E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050FD1B1D64B200EB7E37 /* dept_struct.swift */; };
+		E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		040BF9971B1D51B400713061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040BF9981B1D51B400713061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		040BF99B1B1D51B400713061 /* DAT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DAT.xcdatamodel; sourceTree = "<group>"; };
-		040BF99D1B1D51B400713061 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		040BF9A01B1D51B400713061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		040BF9A21B1D51B400713061 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		040BF9A51B1D51B400713061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		E73050F91B1D5DBD00EB7E37 /* university_data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = university_data.swift; sourceTree = "<group>"; };
 		E73050FB1B1D640700EB7E37 /* grade_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grade_struct.swift; sourceTree = "<group>"; };
 		E73050FD1B1D64B200EB7E37 /* dept_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dept_struct.swift; sourceTree = "<group>"; };
+		E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPA_Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +75,7 @@
 		040BF98A1B1D51B400713061 = {
 			isa = PBXGroup;
 			children = (
+				E72115D21B20537F001013AE /* Podfile */,
 				040BF9951B1D51B400713061 /* DAT */,
 				040BF9AE1B1D51B400713061 /* DATTests */,
 				040BF9941B1D51B400713061 /* Products */,
@@ -93,6 +94,9 @@
 		040BF9951B1D51B400713061 /* DAT */ = {
 			isa = PBXGroup;
 			children = (
+				E72115D71B20571B001013AE /* CSV.swift */,
+				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
+				E72115CE1B2051AA001013AE /* users.csv */,
 				040BF9981B1D51B400713061 /* AppDelegate.swift */,
 				040BF99D1B1D51B400713061 /* ViewController.swift */,
 				040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */,
@@ -216,8 +220,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E72115D31B20537F001013AE /* Podfile in Resources */,
 				040BF9A11B1D51B400713061 /* Main.storyboard in Resources */,
 				040BF9A61B1D51B400713061 /* LaunchScreen.xib in Resources */,
+				E72115CF1B2051AA001013AE /* users.csv in Resources */,
 				040BF9A31B1D51B400713061 /* Images.xcassets in Resources */,
 				040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */,
 			);
@@ -241,6 +247,7 @@
 				040BF99E1B1D51B400713061 /* ViewController.swift in Sources */,
 				040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */,
 				E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */,
+				E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */,
 				E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */,
 				E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */,
 				040BF9991B1D51B400713061 /* AppDelegate.swift in Sources */,
@@ -371,6 +378,9 @@
 				INFOPLIST_FILE = DAT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				"SWIFT_INSTALL_OBJC_HEADER[arch=*]" = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -381,6 +391,9 @@
 				INFOPLIST_FILE = DAT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				"SWIFT_INSTALL_OBJC_HEADER[arch=*]" = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

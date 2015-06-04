@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct grade {
-    static let Ap = 4.0
-    static let A  = 4.0
-    static let Am = 3.7
-    static let Bp = 3.3
-    static let B  = 3.0
-    static let Bm = 2.7
-    static let Cp = 2.3
-    static let C  = 2.0
-    static let Dp = 1.3
-    static let D  = 1.0
-    static let Dm = 0.7
-    static let F  = 0
-}
+let grade: [String:Double] = [
+        "Ap":4.0,
+        "A" :4.0,
+        "Am" :3.7,
+        "Bp" :3.3,
+        "B" :3.0,
+        "Bm" :2.7,
+        "Cp" :2.3,
+        "C" :2.0,
+        "Dp" :1.3,
+        "D" :1.0,
+        "Dm" :0.7,
+        "F" :0
+    ]

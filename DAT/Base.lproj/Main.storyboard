@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="389"/>
+            <point key="canvasLocation" x="1355" y="181"/>
         </scene>
         <!--Areas View-->
         <scene sceneID="wjr-zH-nPW">
@@ -73,12 +73,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ke-Bg-tH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="1645.5"/>
+            <point key="canvasLocation" x="1355" y="996.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Calculator-->
         <scene sceneID="1ly-Xf-FMk">
             <objects>
-                <viewController id="WPg-JC-0Bh" sceneMemberID="viewController">
+                <viewController id="WPg-JC-0Bh" customClass="GPA_Calculator" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O1G-Cp-rDe"/>
                         <viewControllerLayoutGuide type="bottom" id="LVl-5b-1s8"/>
@@ -89,6 +89,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6O-pQ-saI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="177"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPA GRADE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZl-ra-sQT">
+                                        <rect key="frame" x="252" y="78" width="97" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6F-d0-Luv">
@@ -110,10 +118,13 @@
                             <constraint firstItem="i6F-d0-Luv" firstAttribute="top" secondItem="fmT-kW-W7x" secondAttribute="top" constant="177" id="mW5-QT-Ga5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gpa_value" destination="vZl-ra-sQT" id="H4U-Bl-qHo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbo-1i-ZjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="1088"/>
+            <point key="canvasLocation" x="538" y="908"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="osI-tJ-Lz0">
@@ -131,7 +142,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oeh-Z2-vcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="389"/>
+            <point key="canvasLocation" x="543" y="181"/>
         </scene>
     </scenes>
 </document>
