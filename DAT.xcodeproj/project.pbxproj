@@ -52,7 +52,7 @@
 		E73050F91B1D5DBD00EB7E37 /* university_data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = university_data.swift; sourceTree = "<group>"; };
 		E73050FB1B1D640700EB7E37 /* grade_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grade_struct.swift; sourceTree = "<group>"; };
 		E73050FD1B1D64B200EB7E37 /* dept_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dept_struct.swift; sourceTree = "<group>"; };
-		E785B37F1B210AB800603B81 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = DAT/CSV.swift; sourceTree = "<group>"; };
+		E785B37F1B210AB800603B81 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPA_Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,6 @@
 		040BF98A1B1D51B400713061 = {
 			isa = PBXGroup;
 			children = (
-				E785B37F1B210AB800603B81 /* CSV.swift */,
 				040BF9951B1D51B400713061 /* DAT */,
 				040BF9AE1B1D51B400713061 /* DATTests */,
 				040BF9941B1D51B400713061 /* Products */,
@@ -96,6 +95,7 @@
 		040BF9951B1D51B400713061 /* DAT */ = {
 			isa = PBXGroup;
 			children = (
+				E785B37F1B210AB800603B81 /* CSV.swift */,
 				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
 				040BF9981B1D51B400713061 /* AppDelegate.swift */,
 				040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */,
