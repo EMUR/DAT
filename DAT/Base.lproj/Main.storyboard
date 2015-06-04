@@ -93,7 +93,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gpa_value" destination="vZl-ra-sQT" id="1mp-4b-JBu"/>
+                        <outlet property="gpa_value" destination="vZl-ra-sQT" id="H4U-Bl-qHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbo-1i-ZjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
