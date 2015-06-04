@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jaF-oE-V2o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WPg-JC-0Bh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="1355" y="996.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Calculator-->
         <scene sceneID="1ly-Xf-FMk">
             <objects>
-                <viewController id="WPg-JC-0Bh" sceneMemberID="viewController">
+                <viewController id="WPg-JC-0Bh" customClass="GPA_Calculator" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O1G-Cp-rDe"/>
                         <viewControllerLayoutGuide type="bottom" id="LVl-5b-1s8"/>
@@ -63,6 +63,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6O-pQ-saI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="177"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPA GRADE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZl-ra-sQT">
+                                        <rect key="frame" x="252" y="78" width="97" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6F-d0-Luv">
@@ -84,6 +92,9 @@
                             <constraint firstItem="i6F-d0-Luv" firstAttribute="top" secondItem="fmT-kW-W7x" secondAttribute="top" constant="177" id="mW5-QT-Ga5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gpa_value" destination="vZl-ra-sQT" id="1mp-4b-JBu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbo-1i-ZjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
