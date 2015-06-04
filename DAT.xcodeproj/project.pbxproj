@@ -14,6 +14,9 @@
 		040BF9A31B1D51B400713061 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9A21B1D51B400713061 /* Images.xcassets */; };
 		040BF9A61B1D51B400713061 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9A41B1D51B400713061 /* LaunchScreen.xib */; };
 		040BF9B21B1D51B400713061 /* DATTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9B11B1D51B400713061 /* DATTests.swift */; };
+		040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */; };
+		040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9F81B1FF08300713061 /* AreaCustomCell.swift */; };
+		040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9F91B1FF08300713061 /* AreaCustomCell.xib */; };
 		E73050F81B1D57D800EB7E37 /* classes_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F71B1D57D800EB7E37 /* classes_data.swift */; };
 		E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F91B1D5DBD00EB7E37 /* university_data.swift */; };
 		E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050FB1B1D640700EB7E37 /* grade_struct.swift */; };
@@ -42,6 +45,9 @@
 		040BF9AB1B1D51B400713061 /* DATTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DATTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040BF9B01B1D51B400713061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040BF9B11B1D51B400713061 /* DATTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATTests.swift; sourceTree = "<group>"; };
+		040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGETCAreasView.swift; sourceTree = "<group>"; };
+		040BF9F81B1FF08300713061 /* AreaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaCustomCell.swift; sourceTree = "<group>"; };
+		040BF9F91B1FF08300713061 /* AreaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaCustomCell.xib; sourceTree = "<group>"; };
 		E73050F71B1D57D800EB7E37 /* classes_data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classes_data.swift; sourceTree = "<group>"; };
 		E73050F91B1D5DBD00EB7E37 /* university_data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = university_data.swift; sourceTree = "<group>"; };
 		E73050FB1B1D640700EB7E37 /* grade_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grade_struct.swift; sourceTree = "<group>"; };
@@ -89,7 +95,10 @@
 			children = (
 				040BF9981B1D51B400713061 /* AppDelegate.swift */,
 				040BF99D1B1D51B400713061 /* ViewController.swift */,
+				040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */,
 				040BF99F1B1D51B400713061 /* Main.storyboard */,
+				040BF9F81B1FF08300713061 /* AreaCustomCell.swift */,
+				040BF9F91B1FF08300713061 /* AreaCustomCell.xib */,
 				040BF9A21B1D51B400713061 /* Images.xcassets */,
 				040BF9A41B1D51B400713061 /* LaunchScreen.xib */,
 				E73050F71B1D57D800EB7E37 /* classes_data.swift */,
@@ -210,6 +219,7 @@
 				040BF9A11B1D51B400713061 /* Main.storyboard in Resources */,
 				040BF9A61B1D51B400713061 /* LaunchScreen.xib in Resources */,
 				040BF9A31B1D51B400713061 /* Images.xcassets in Resources */,
+				040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,10 +239,12 @@
 			files = (
 				E73050F81B1D57D800EB7E37 /* classes_data.swift in Sources */,
 				040BF99E1B1D51B400713061 /* ViewController.swift in Sources */,
+				040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */,
 				E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */,
 				E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */,
 				E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */,
 				040BF9991B1D51B400713061 /* AppDelegate.swift in Sources */,
+				040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */,
 				040BF99C1B1D51B400713061 /* DAT.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
