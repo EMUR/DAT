@@ -47,7 +47,33 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA2-CN-a6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="389"/>
+            <point key="canvasLocation" x="2076" y="703"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="d46-VS-44J">
+            <objects>
+                <tableViewController id="w4K-Fs-js7" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xxT-G6-wAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gMO-nf-zsI">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gMO-nf-zsI" id="2Wd-3S-B01">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w4K-Fs-js7" id="nMq-NA-bxx"/>
+                            <outlet property="delegate" destination="w4K-Fs-js7" id="HFK-7V-sE5"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qb4-6S-Dlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2756" y="703"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="gVc-cS-DXT">
