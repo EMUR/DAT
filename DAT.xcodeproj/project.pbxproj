@@ -17,6 +17,7 @@
 		040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9F81B1FF08300713061 /* AreaCustomCell.swift */; };
 		040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9F91B1FF08300713061 /* AreaCustomCell.xib */; };
 		0428AB911B22BDCB000CE23C /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0428AB901B22BDCB000CE23C /* SwiftCSV.framework */; };
+		0428AB9A1B22CBCE000CE23C /* universityProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428AB991B22CBCE000CE23C /* universityProfileView.swift */; };
 		3FA275FAC0BD5579089CADB4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D333B7E9FC28408053A8CCC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E73050F81B1D57D800EB7E37 /* classes_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F71B1D57D800EB7E37 /* classes_data.swift */; };
 		E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F91B1D5DBD00EB7E37 /* university_data.swift */; };
@@ -51,6 +52,7 @@
 		040BF9F91B1FF08300713061 /* AreaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaCustomCell.xib; sourceTree = "<group>"; };
 		0428AB901B22BDCB000CE23C /* SwiftCSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCSV.framework; path = "Pods/../build/Debug-iphoneos/Pods/SwiftCSV.framework"; sourceTree = "<group>"; };
 		0428AB941B22BF47000CE23C /* DAT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DAT-Bridging-Header.h"; sourceTree = "<group>"; };
+		0428AB991B22CBCE000CE23C /* universityProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = universityProfileView.swift; sourceTree = "<group>"; };
 		53A81178002695DB894A3014 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D333B7E9FC28408053A8CCC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4728E1641DBBFAD941781FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				040BF9A21B1D51B400713061 /* Images.xcassets */,
 				040BF9A41B1D51B400713061 /* LaunchScreen.xib */,
 				E73050F71B1D57D800EB7E37 /* classes_data.swift */,
+				0428AB991B22CBCE000CE23C /* universityProfileView.swift */,
 				E73050F91B1D5DBD00EB7E37 /* university_data.swift */,
 				E73050FB1B1D640700EB7E37 /* grade_struct.swift */,
 				E73050FD1B1D64B200EB7E37 /* dept_struct.swift */,
@@ -324,6 +327,7 @@
 				E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */,
 				E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */,
 				E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */,
+				0428AB9A1B22CBCE000CE23C /* universityProfileView.swift in Sources */,
 				040BF9991B1D51B400713061 /* AppDelegate.swift in Sources */,
 				040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */,
 				040BF99C1B1D51B400713061 /* DAT.xcdatamodeld in Sources */,
