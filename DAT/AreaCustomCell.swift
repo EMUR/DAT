@@ -11,6 +11,7 @@ import UIKit
 class AreaCustomCell: UITableViewCell {
     @IBOutlet weak var ClassesCount: UILabel!
     @IBOutlet weak var AreaText: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

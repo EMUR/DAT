@@ -18,6 +18,7 @@ class IGETCAreasView: UITableViewController {
         var nib = UINib(nibName: "AreaCustomCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: "AreaCell")
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
