@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import QuartzCore
 
 class universityProfileView: UITableViewController {
     @IBOutlet weak var uni_background: UIImageView!
@@ -14,9 +16,46 @@ class universityProfileView: UITableViewController {
     @IBOutlet weak var uni_desc: UITextView!
     @IBOutlet weak var uni_rank: UILabel!
     @IBOutlet weak var uni_avgpa: UILabel!
+    
+    //GEO CODE PURPOSES
+    var university_name : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // START GEO DATA PARSER
+        
+        let geoCoder = CLGeocoder()
+        
+        var address = "\(university_name), California, United States of America"
+        
+        geoCoder.geocodeAddressString(address,
+            completionHandler:
+            {(placemarks: [AnyObject]!, error: NSError!) in
+                
+                if error != nil {
+                    println("Geocode failed with error: \(error.localizedDescription)")
+                }
+                
+                if placemarks.count > 0 {
+                    let placemark = placemarks[0] as CLPlacemark
+                    let location = placemark.location
+                    self.coords = location.coordinate
+                }
+                
+                // Set the location and show it on the map
+                let location = CLLocationCoordinate2D(
+                    latitude: self.coords!.latitude,
+                    longitude: self.coords!.longitude
+                )
+                
+                let span = MKCoordinateSpanMake(1, 1)
+                let region = MKCoordinateRegion(center: location, span: span)
+                self.countryMap.setRegion(region, animated: true)
+                
+        })
+        
+        // END GEO DATA PARSER
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
