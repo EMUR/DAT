@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8DB8C2CE-CA35-4014-82F6-60EA53ACB86C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DAT</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>97522075D462A3880B215664D8881ADD4F230BE1</key>
+		<string>https://github.com/awesomeEM/DAT.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DAT.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>97522075D462A3880B215664D8881ADD4F230BE1</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/awesomeEM/DAT.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>97522075D462A3880B215664D8881ADD4F230BE1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>97522075D462A3880B215664D8881ADD4F230BE1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DAT</string>
+		</dict>
+	</array>
+</dict>
+</plist>
