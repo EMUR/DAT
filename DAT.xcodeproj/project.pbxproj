@@ -23,7 +23,7 @@
 		E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F91B1D5DBD00EB7E37 /* university_data.swift */; };
 		E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050FB1B1D640700EB7E37 /* grade_struct.swift */; };
 		E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050FD1B1D64B200EB7E37 /* dept_struct.swift */; };
-		E74B48B91B22D316007E373B /* csv_importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B48B81B22D316007E373B /* csv_importer.swift */; };
+		E74620FF1B22E5AF00BE4808 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74620FE1B22E5AF00BE4808 /* main.swift */; };
 		E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,7 @@
 		E73050F91B1D5DBD00EB7E37 /* university_data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = university_data.swift; sourceTree = "<group>"; };
 		E73050FB1B1D640700EB7E37 /* grade_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grade_struct.swift; sourceTree = "<group>"; };
 		E73050FD1B1D64B200EB7E37 /* dept_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dept_struct.swift; sourceTree = "<group>"; };
-		E74B48B81B22D316007E373B /* csv_importer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv_importer.swift; sourceTree = "<group>"; };
+		E74620FE1B22E5AF00BE4808 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPA_Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
-				E74B48B81B22D316007E373B /* csv_importer.swift */,
 				040BF9981B1D51B400713061 /* AppDelegate.swift */,
+				E74620FE1B22E5AF00BE4808 /* main.swift */,
 				040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */,
 				040BF99F1B1D51B400713061 /* Main.storyboard */,
 				040BF9F81B1FF08300713061 /* AreaCustomCell.swift */,
@@ -328,10 +328,10 @@
 				040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */,
 				E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */,
 				E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */,
-				E74B48B91B22D316007E373B /* csv_importer.swift in Sources */,
 				E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */,
 				E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */,
 				0428AB9A1B22CBCE000CE23C /* universityProfileView.swift in Sources */,
+				E74620FF1B22E5AF00BE4808 /* main.swift in Sources */,
 				040BF9991B1D51B400713061 /* AppDelegate.swift in Sources */,
 				040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */,
 				040BF99C1B1D51B400713061 /* DAT.xcdatamodeld in Sources */,
