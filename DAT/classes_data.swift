@@ -10,11 +10,11 @@ import UIKit
 import CoreData
 
 class classObject: NSManagedObject {
-    @NSManaged var igetc_area : [Int] // IGETC Area
-    @NSManaged var igetc_suba : [String] // IGETC Sub
+    @NSManaged var igetc_area : String! // IGETC Area
+    @NSManaged var igetc_suba : String! // IGETC Sub
     @NSManaged var department : String! // Department ID
     @NSManaged var course_num : String! // Course Number
-    @NSManaged var course_unt : Double  // Course Units
+    @NSManaged var course_unt : String! // Course Units
     @NSManaged var course_tle : String! // Course Title
     @NSManaged var course_des : String! // Course Description
 }
