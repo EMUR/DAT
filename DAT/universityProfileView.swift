@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import QuartzCore
 
 class universityProfileView: UITableViewController {
     @IBOutlet weak var uni_background: UIImageView!
@@ -16,9 +15,11 @@ class universityProfileView: UITableViewController {
     @IBOutlet weak var uni_desc: UITextView!
     @IBOutlet weak var uni_rank: UILabel!
     @IBOutlet weak var uni_avgpa: UILabel!
+    @IBOutlet var uni_map: MKMapView!
     
     //GEO CODE PURPOSES
     var university_name : String!
+    var coords: CLLocationCoordinate2D?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,9 @@ class universityProfileView: UITableViewController {
         // START GEO DATA PARSER
         
         let geoCoder = CLGeocoder()
-        
-        var address = "\(university_name), California, United States of America"
+        university_name = "University of California, Berkeley"
+        //var address = "\(university_name), California, United States of America"
+        var address = "University of California - Berkeley, California, USA"
         
         geoCoder.geocodeAddressString(address,
             completionHandler:
@@ -49,9 +51,9 @@ class universityProfileView: UITableViewController {
                     longitude: self.coords!.longitude
                 )
                 
-                let span = MKCoordinateSpanMake(1, 1)
+                let span = MKCoordinateSpanMake(0.5/69.0, 0.5/69.0) // 1 degree is approx 69 miles. Therefore, 0.5mile x 0.5mile map, then the value is 0.5/69
                 let region = MKCoordinateRegion(center: location, span: span)
-                self.countryMap.setRegion(region, animated: true)
+                self.uni_map.setRegion(region, animated: true)
                 
         })
         

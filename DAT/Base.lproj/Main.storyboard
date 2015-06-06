@@ -70,6 +70,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <mapView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="jRb-Oh-Fqx">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </mapView>
                         <sections>
                             <tableViewSection id="1AD-dd-1Pz">
                                 <cells>
@@ -213,6 +217,7 @@
                         <outlet property="uni_avgpa" destination="923-Qo-kGz" id="6hy-f2-DxZ"/>
                         <outlet property="uni_background" destination="QsH-MM-XtI" id="6ap-HO-yZB"/>
                         <outlet property="uni_desc" destination="CKr-9h-KOu" id="Dze-6W-SMd"/>
+                        <outlet property="uni_map" destination="jRb-Oh-Fqx" id="qrh-iw-hCk"/>
                         <outlet property="uni_rank" destination="OWZ-oa-Edd" id="A92-1J-BoA"/>
                         <outlet property="uni_weblink" destination="jJ9-x9-bkl" id="N6l-ob-7py"/>
                     </connections>
