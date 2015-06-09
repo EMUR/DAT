@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3ea-DT-W1Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eyx-A0-kc2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -66,11 +66,11 @@
         <scene sceneID="Uer-zO-dW2">
             <objects>
                 <tableViewController id="Eyx-A0-kc2" customClass="universityProfileView" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PR4-qb-Yf5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PR4-qb-Yf5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <mapView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="jRb-Oh-Fqx">
+                        <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsPointsOfInterest="NO" id="jRb-Oh-Fqx">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </mapView>
@@ -85,23 +85,37 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QsH-MM-XtI">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.64999999999999969" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blackback.png" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-lv-bSQ">
+                                                    <rect key="frame" x="0.0" y="-94" width="600" height="394"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of California" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-8b-BPT">
                                                     <rect key="frame" x="8" y="213" width="584" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="46" id="j15-4L-FYN"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCBL" translatesAutoresizingMaskIntoConstraints="NO" id="diV-QG-qcp">
+                                                    <rect key="frame" x="232" y="57" width="137" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="137" id="1Lt-pH-gbm"/>
+                                                        <constraint firstAttribute="height" constant="128" id="yGY-9M-Dkd"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Bk3-8b-BPT" firstAttribute="centerX" secondItem="QsH-MM-XtI" secondAttribute="centerX" id="1tn-c8-yGQ"/>
+                                                <constraint firstItem="diV-QG-qcp" firstAttribute="centerY" secondItem="QsH-MM-XtI" secondAttribute="centerY" constant="-29" id="8Fr-wz-WMS"/>
                                                 <constraint firstAttribute="trailing" secondItem="QsH-MM-XtI" secondAttribute="trailing" id="CdR-K2-llN"/>
                                                 <constraint firstAttribute="bottom" secondItem="QsH-MM-XtI" secondAttribute="bottom" id="IcS-P7-cpP"/>
                                                 <constraint firstItem="QsH-MM-XtI" firstAttribute="leading" secondItem="fmn-Zd-CJ7" secondAttribute="leading" id="JQx-iU-Jr4"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Bk3-8b-BPT" secondAttribute="bottom" constant="32.5" id="Jm7-Wn-TxK"/>
+                                                <constraint firstItem="mfG-lv-bSQ" firstAttribute="bottom" secondItem="QsH-MM-XtI" secondAttribute="bottom" id="QNg-1K-uJr"/>
                                                 <constraint firstItem="Bk3-8b-BPT" firstAttribute="leading" secondItem="fmn-Zd-CJ7" secondAttribute="leadingMargin" id="Qg6-O7-zEv"/>
+                                                <constraint firstItem="mfG-lv-bSQ" firstAttribute="leading" secondItem="QsH-MM-XtI" secondAttribute="leading" id="V2W-4o-BTv"/>
+                                                <constraint firstItem="diV-QG-qcp" firstAttribute="centerX" secondItem="QsH-MM-XtI" secondAttribute="centerX" constant="0.5" id="fIs-G5-DJl"/>
                                                 <constraint firstItem="QsH-MM-XtI" firstAttribute="top" secondItem="fmn-Zd-CJ7" secondAttribute="top" id="yHO-b0-q64"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -224,7 +238,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yy-aV-FKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3336" y="201"/>
+            <point key="canvasLocation" x="3336" y="200"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="gVc-cS-DXT">
@@ -374,4 +388,9 @@
             <point key="canvasLocation" x="817" y="195"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="UCB" width="400" height="265"/>
+        <image name="UCBL" width="260" height="260"/>
+        <image name="blackback.png" width="600" height="600"/>
+    </resources>
 </document>
