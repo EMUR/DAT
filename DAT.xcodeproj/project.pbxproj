@@ -60,7 +60,7 @@
 		53A81178002695DB894A3014 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D333B7E9FC28408053A8CCC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4728E1641DBBFAD941781FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E73050F71B1D57D800EB7E37 /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
+		E73050F71B1D57D800EB7E37 /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = classObject.swift; path = DAT/classObject.swift; sourceTree = "<group>"; };
 		E73050F91B1D5DBD00EB7E37 /* university_data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = university_data.swift; sourceTree = "<group>"; };
 		E73050FB1B1D640700EB7E37 /* grade_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grade_struct.swift; sourceTree = "<group>"; };
 		E73050FD1B1D64B200EB7E37 /* dept_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dept_struct.swift; sourceTree = "<group>"; };
@@ -94,6 +94,7 @@
 		040BF98A1B1D51B400713061 = {
 			isa = PBXGroup;
 			children = (
+				E73050F71B1D57D800EB7E37 /* classObject.swift */,
 				040BF9951B1D51B400713061 /* DAT */,
 				040BF9AE1B1D51B400713061 /* DATTests */,
 				040BF9941B1D51B400713061 /* Products */,
@@ -126,7 +127,6 @@
 				040BF9F91B1FF08300713061 /* AreaCustomCell.xib */,
 				040BF9A21B1D51B400713061 /* Images.xcassets */,
 				040BF9A41B1D51B400713061 /* LaunchScreen.xib */,
-				E73050F71B1D57D800EB7E37 /* classObject.swift */,
 				0428AB991B22CBCE000CE23C /* universityProfileView.swift */,
 				E73050F91B1D5DBD00EB7E37 /* university_data.swift */,
 				E73050FB1B1D640700EB7E37 /* grade_struct.swift */,
