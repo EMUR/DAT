@@ -56,57 +56,65 @@ class ImportCSVController: UIViewController, NSCoding {
                 
                 // Start the collection process
                 
-                // Variables
-                let myMOC = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext as NSManagedObjectContext!
                 var saveErr : NSError?
+
+                // Variables
+                let del = UIApplication.sharedApplication().delegate as AppDelegate!
                 
-                println(load_data(myMOC).debugDescription)
+                let MOC = del.managedObjectContext
+                
+                var fetchRequest = NSFetchRequest(entityName: "ClassObject")
+                
+                let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [NSManagedObject]
+                
+
+                if results.count == 0
+                {
+                    var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: MOC!) as classObject
+                    
+                                        for i in 0...rows - 1 {
+                    
+                                            // Get course area
+                                            //println(csv.rows[i]["area"]!)
+                                            courses.igetc_area = csv.rows[i]["area"]!
+                    
+                                            // Get course sub-area
+                                            //println(csv.rows[i]["sub_area"]!)
+                                            courses.igetc_suba = csv.rows[i]["sub_area"]!
+                    
+                                            // Get course department
+                                            //println(csv.rows[i]["dept"]!)
+                                            courses.department = csv.rows[i]["dept"]!
+                    
+                                            // Get course number
+                                            //println(csv.rows[i]["course_num"]!)
+                                            courses.course_num = csv.rows[i]["course_num"]!
+                    
+                                            // Get course title
+                                            let course_title = csv.rows[i]["title"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                                            courses.course_tle = course_title
+                    
+                                            // Get course description
+                                            let course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                                            //println(course_description)
+                                            courses.course_des = course_description
+                                        
+                                            // Get course units
+                                            //println(csv.rows[i]["units"]!)0
+                                            courses.course_unt = csv.rows[i]["units"]!
+                    }
+                    
+  
+                }
+                else
+                {
+                    println("Results are not null")
+                    println(results)
+                }
                 
                 // Create object
-                var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: myMOC) as classObject
+//                var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: myMOC) as classObject
                 
-                
-//                    for i in 0...rows - 1 {
-//                        
-//                        // Get course area
-//                        //println(csv.rows[i]["area"]!)
-//                        courses.igetc_area = csv.rows[i]["area"]!
-//                    
-//                        // Get course sub-area
-//                        //println(csv.rows[i]["sub_area"]!)
-//                        courses.igetc_suba = csv.rows[i]["sub_area"]!
-//                    
-//                        // Get course department
-//                        //println(csv.rows[i]["dept"]!)
-//                        courses.department = csv.rows[i]["dept"]!
-//                    
-//                        // Get course number
-//                        //println(csv.rows[i]["course_num"]!)
-//                        courses.course_num = csv.rows[i]["course_num"]!
-//                    
-//                        // Get course title
-//                        let course_title = csv.rows[i]["title"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
-//                        //println(course_title)
-//                        courses.course_tle = course_title
-//                    
-//                        // Get course description
-//                        let course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
-//                        //println(course_description)
-//                        courses.course_des = course_description
-//                        println(courses.course_des)
-//                    
-//                        // Get course units
-//                        //println(csv.rows[i]["units"]!)
-//                        courses.course_unt = csv.rows[i]["units"]!
-//                        println(courses.course_unt)
-//                        
-//                    }
-                
-                if myMOC!.save(&saveErr) != true {
-                    println("Insert to DB Error: \(saveErr?.localizedDescription)")
-                    return
-                }
-
                 
             } // End of CSVBuild
             
