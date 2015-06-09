@@ -34,7 +34,9 @@ class ImportCSVController: UIViewController, NSCoding {
         var urlpath = NSBundle.mainBundle().pathForResource("classes_short", ofType: "csv")
         
         if let csvURL:NSURL = NSURL.fileURLWithPath(urlpath!) {
+            
             var error: NSErrorPointer = nil
+            
             if let csv = CSV(contentsOfURL: csvURL, error: error) {
                 
                 // Rows
@@ -64,8 +66,9 @@ class ImportCSVController: UIViewController, NSCoding {
                 courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: myMOC!) as classObject
                 
                 for i in 0...rows - 1 {
+                    
                     // Get course area
-                    courses.igetc_area = csv.rows[i]["area"]!
+                    courses.igetc_area = csv.rows[i]["area"]
                     
                     // Get course sub-area
                     courses.igetc_suba = csv.rows[i]["sub_area"]!
@@ -93,6 +96,7 @@ class ImportCSVController: UIViewController, NSCoding {
                     println("Insert to DB Error: \(saveErr?.localizedDescription)")
                     return
                 }
+
                 
             } // End of CSVBuild
             

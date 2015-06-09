@@ -115,8 +115,8 @@
 		040BF9951B1D51B400713061 /* DAT */ = {
 			isa = PBXGroup;
 			children = (
-				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
 				040BF9981B1D51B400713061 /* AppDelegate.swift */,
+				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
 				E74621081B22F25F00BE4808 /* ImportCSVController.swift */,
 				E74621061B22F15C00BE4808 /* classes_short.csv */,
 				E74621001B22E74E00BE4808 /* classes.csv */,
