@@ -57,16 +57,14 @@ class ImportCSVController: UIViewController, NSCoding {
                 // Start the collection process
                 
                 // Variables
-                var courses : classObject!
-                let myMOC = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+                let myMOC = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext as NSManagedObjectContext!
                 var saveErr : NSError?
-                var new_desc: String
                 
                 // Create object
-                courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: myMOC!) as classObject
+                var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: myMOC) as classObject
                 
                 for i in 0...rows - 1 {
-                    
+                
                     // Get course area
                     courses.igetc_area = csv.rows[i]["area"]
                     

@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+@objc(classObject)
+
 class classObject: NSManagedObject {
     @NSManaged var igetc_area : String! // IGETC Area
     @NSManaged var igetc_suba : String! // IGETC Sub
