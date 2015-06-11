@@ -1,5 +1,5 @@
 //
-//  DAT.swift
+//  classObject.swift
 //  DAT
 //
 //  Created by Adib Behjat on 6/10/15.
@@ -11,6 +11,7 @@ import CoreData
 
 class classObject: NSManagedObject {
 
+<<<<<<< HEAD
     @NSManaged var course_des: String //Course Description
     @NSManaged var course_num: String //Course Number
     @NSManaged var course_tle: String //Course Title
@@ -26,6 +27,15 @@ class classObject: NSManagedObject {
 <<<<<<< HEAD
     
 =======
+=======
+    @NSManaged var course_des: String
+    @NSManaged var course_num: String
+    @NSManaged var course_tle: String
+    @NSManaged var course_unt: String
+    @NSManaged var department: String
+    @NSManaged var igetc_area: String
+    @NSManaged var igetc_suba: String
+>>>>>>> parent of 26f32f1... Import of university and classes complete
 
 >>>>>>> parent of b1a6d6d... fix
 }
