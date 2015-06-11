@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< Updated upstream
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3ea-DT-W1Q">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ght-5R-QtP">
+>>>>>>> Stashed changes
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -702,7 +706,7 @@
         <!--Uni List-->
         <scene sceneID="Ws5-99-2pe">
             <objects>
-                <viewController id="ght-5R-QtP" customClass="Uni_List" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ght-5R-QtP" customClass="Uni_List" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uly-s6-BVb"/>
                         <viewControllerLayoutGuide type="bottom" id="6q0-Gf-0M1"/>
@@ -711,8 +715,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< Updated upstream
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wallforCollege" translatesAutoresizingMaskIntoConstraints="NO" id="CDh-MZ-Wk7">
                                 <rect key="frame" x="-145" y="119" width="600" height="600"/>
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallforCollege" translatesAutoresizingMaskIntoConstraints="NO" id="CDh-MZ-Wk7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+>>>>>>> Stashed changes
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f2j-zu-aYE">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -769,9 +778,6 @@
                             <constraint firstItem="f2j-zu-aYE" firstAttribute="leading" secondItem="db0-7s-Byg" secondAttribute="leading" id="xe6-dU-6u4"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="MainCollection" destination="f2j-zu-aYE" id="O0q-Bh-Hn7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOb-jb-ttr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

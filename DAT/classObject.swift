@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 class classObject: NSManagedObject {
-    
+
     @NSManaged var course_des: String //Course Description
     @NSManaged var course_num: String //Course Number
     @NSManaged var course_tle: String //Course Title
@@ -20,5 +20,10 @@ class classObject: NSManagedObject {
     @NSManaged var igetc_suba: String //Course IGETC Sub Area
     @NSManaged var course_tkn: NSNumber //Course Taken
     @NSManaged var course_grd: String //Course Grade
+<<<<<<< HEAD
     
 }
+=======
+
+}
+>>>>>>> parent of b1a6d6d... fix
