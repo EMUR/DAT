@@ -69,9 +69,9 @@ class IGETCAreasView: UITableViewController {
             indPath = self.tableView.indexPathForSelectedRow()!
             segueObject = initObjects[indPath.row]
             
-            classViewController.courseLabel = segueObject.course_tle
-            classViewController.courseDept = segueObject.department
-            classViewController.courseNum = segueObject.course_num
+//            classViewController.courseLabel = segueObject.course_tle
+//            classViewController.courseDept = segueObject.department
+//            classViewController.courseNum = segueObject.course_num
         
             
             
