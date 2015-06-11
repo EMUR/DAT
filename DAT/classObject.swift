@@ -22,12 +22,15 @@ class classObject: NSManagedObject {
     @NSManaged var course_grd: String //Course Grade
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
 >>>>>>> parent of b1a6d6d... fix
 }
 =======
+=======
+>>>>>>> parent of b1a6d6d... fix
 
 }
 >>>>>>> parent of b1a6d6d... fix
