@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@objc(classObject)
 class classObject: NSManagedObject {
     
     @NSManaged var course_des: String //Course Description
