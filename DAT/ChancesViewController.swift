@@ -25,7 +25,14 @@ class ChancesViewController: UIViewController, UITextViewDelegate {
         switch((textView.text as NSString).length)
         {
         case 1:
+            if (textView.text.toInt() < 0 || textView.text.toInt() > 4)
+            {
+                textView.text = ""
+            }
+            else
+            {
             textView.text = "\(textView.text)."
+            }
         case 4:
             textView.resignFirstResponder()
         default:
