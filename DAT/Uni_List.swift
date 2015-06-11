@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
 
@@ -25,8 +26,26 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         
         self.view.viewWithTag(1)?.addSubview(visualEffectView)
         
+        // Retrieve University Data
+        var saveErr : NSError?
+        let del = UIApplication.sharedApplication().delegate as AppDelegate!
+        let MOC = del.managedObjectContext
+        var fetchRequest = NSFetchRequest(entityName: "UniObject")
+        let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
         
-        Uni_Arrays = ["UCB", "UCL", "UCD", "UCSD", "UCSC", "UCSF", "UCI", "UCSB"]
+        // Go through the results and append the logo names
+        for i in 0...results.count - 1 {
+            let image_label = results[i].uni_acrn + "L"
+            Uni_Arrays.append(image_label)
+        }
+        
+        // Sort the Array
+        Uni_Arrays.sort {
+            return $0 < $1
+        }
+        
+        // Testing purposes
+        println(Uni_Arrays)
         
         
         // Do any additional setup after loading the view.
@@ -35,7 +54,7 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = MainCollection.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath:indexPath) as Uni_cell
                 
-        cell.SetUpImage("\(Uni_Arrays[indexPath.row])L")
+        cell.SetUpImage("\(Uni_Arrays[indexPath.row])")
         
       
         return cell
@@ -56,8 +75,6 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
 
     /*

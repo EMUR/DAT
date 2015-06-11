@@ -58,9 +58,10 @@ class ImportCSVController: UIViewController, NSCoding {
                 
                 // Start the collection process
                 
+                // Variables
+                
                 var saveErr : NSError?
 
-                // Variables
                 let del = UIApplication.sharedApplication().delegate as AppDelegate!
                 
                 let MOC = del.managedObjectContext
@@ -138,9 +139,9 @@ class ImportCSVController: UIViewController, NSCoding {
                 
                 // Start the collection process
                 
+                // Variables
                 var saveErr : NSError?
                 
-                // Variables
                 let del = UIApplication.sharedApplication().delegate as AppDelegate!
                 
                 let MOC = del.managedObjectContext
