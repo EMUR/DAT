@@ -13,6 +13,7 @@ class classObject: NSManagedObject {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @NSManaged var course_des: String //Course Description
     @NSManaged var course_num: String //Course Number
     @NSManaged var course_tle: String //Course Title
@@ -31,6 +32,8 @@ class classObject: NSManagedObject {
 =======
 =======
 >>>>>>> parent of 26f32f1... Import of university and classes complete
+=======
+>>>>>>> parent of 26f32f1... Import of university and classes complete
     @NSManaged var course_des: String
     @NSManaged var course_num: String
     @NSManaged var course_tle: String
@@ -39,6 +42,9 @@ class classObject: NSManagedObject {
     @NSManaged var igetc_area: String
     @NSManaged var igetc_suba: String
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 26f32f1... Import of university and classes complete
+=======
 >>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
 >>>>>>> parent of 26f32f1... Import of university and classes complete

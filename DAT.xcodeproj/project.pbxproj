@@ -47,9 +47,13 @@
 		E74621091B22F25F00BE4808 /* ImportCSVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74621081B22F25F00BE4808 /* ImportCSVController.swift */; };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		E78CC6EA1B292A7400F8881A /* UniObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CC6E91B292A7400F8881A /* UniObject.swift */; };
 		E78CC6EE1B29429C00F8881A /* university.csv in Resources */ = {isa = PBXBuildFile; fileRef = E78CC6ED1B29429C00F8881A /* university.csv */; };
 		E78CC6F01B2945D000F8881A /* classObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CC6EF1B2945D000F8881A /* classObject.swift */; };
+=======
+		E78CC6DC1B28D16100F8881A /* classObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CC6DB1B28D16100F8881A /* classObject.swift */; };
+>>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
 		E78CC6DC1B28D16100F8881A /* classObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CC6DB1B28D16100F8881A /* classObject.swift */; };
 >>>>>>> parent of 26f32f1... Import of university and classes complete
@@ -117,10 +121,14 @@
 		E74621081B22F25F00BE4808 /* ImportCSVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCSVController.swift; sourceTree = "<group>"; };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		E78CC6E11B2924C500F8881A /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
 		E78CC6E91B292A7400F8881A /* UniObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniObject.swift; sourceTree = "<group>"; };
 		E78CC6ED1B29429C00F8881A /* university.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = university.csv; sourceTree = "<group>"; };
 		E78CC6EF1B2945D000F8881A /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
+=======
+		E78CC6DB1B28D16100F8881A /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
+>>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
 		E78CC6DB1B28D16100F8881A /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
 >>>>>>> parent of 26f32f1... Import of university and classes complete
@@ -181,7 +189,10 @@
 				E74621061B22F15C00BE4808 /* classes_short.csv */,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				E78CC6ED1B29429C00F8881A /* university.csv */,
+=======
+>>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
 >>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
@@ -209,6 +220,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				E78CC6EF1B2945D000F8881A /* classObject.swift */,
 =======
 >>>>>>> parent of b1a6d6d... fix
@@ -220,6 +232,8 @@
 >>>>>>> parent of b1a6d6d... fix
 				E78CC6E91B292A7400F8881A /* UniObject.swift */,
 				E78CC6E11B2924C500F8881A /* classObject.swift */,
+=======
+>>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
 >>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
@@ -360,7 +374,10 @@
 				040BF9A11B1D51B400713061 /* Main.storyboard in Resources */,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				E78CC6EE1B29429C00F8881A /* university.csv in Resources */,
+=======
+>>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
 >>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
@@ -449,8 +466,12 @@
 				040BF99C1B1D51B400713061 /* DAT.xcdatamodeld in Sources */,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				0AD32CEB1B292B6D00E65D17 /* ClassTableViewCell.swift in Sources */,
 				E78CC6F01B2945D000F8881A /* classObject.swift in Sources */,
+=======
+				E78CC6DC1B28D16100F8881A /* classObject.swift in Sources */,
+>>>>>>> parent of 26f32f1... Import of university and classes complete
 =======
 				E78CC6DC1B28D16100F8881A /* classObject.swift in Sources */,
 >>>>>>> parent of 26f32f1... Import of university and classes complete
