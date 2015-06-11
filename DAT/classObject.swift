@@ -21,7 +21,11 @@ class classObject: NSManagedObject {
     @NSManaged var course_tkn: NSNumber //Course Taken
     @NSManaged var course_grd: String //Course Grade
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> parent of b1a6d6d... fix
 }
 =======
 
