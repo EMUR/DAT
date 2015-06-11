@@ -20,6 +20,8 @@
 		0428AB9A1B22CBCE000CE23C /* universityProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428AB991B22CBCE000CE23C /* universityProfileView.swift */; };
 		043FA9771B28A55F00EA03EC /* ChancesViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9761B28A55F00EA03EC /* ChancesViewTableViewController.swift */; };
 		043FA9791B28B1CD00EA03EC /* ChancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9781B28B1CD00EA03EC /* ChancesViewController.swift */; };
+		043FA9AD1B29247900EA03EC /* Uni_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9AC1B29247900EA03EC /* Uni_List.swift */; };
+		043FA9B01B29276600EA03EC /* Uni_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9AE1B29276600EA03EC /* Uni_cell.swift */; };
 		045399EB1B266E6000F92B0B /* blackback.png in Resources */ = {isa = PBXBuildFile; fileRef = 045399EA1B266E6000F92B0B /* blackback.png */; };
 		0AD32CE91B292B3800E65D17 /* ClassListViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD32CE81B292B3800E65D17 /* ClassListViewTableViewController.swift */; };
 		0AD32CEB1B292B6D00E65D17 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD32CEA1B292B6D00E65D17 /* ClassTableViewCell.swift */; };
@@ -30,9 +32,8 @@
 		E74621031B22E91100BE4808 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74621021B22E91100BE4808 /* CSV.swift */; };
 		E74621071B22F15C00BE4808 /* classes_short.csv in Resources */ = {isa = PBXBuildFile; fileRef = E74621061B22F15C00BE4808 /* classes_short.csv */; };
 		E74621091B22F25F00BE4808 /* ImportCSVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74621081B22F25F00BE4808 /* ImportCSVController.swift */; };
-		E78CC6E21B2924C500F8881A /* classObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CC6E11B2924C500F8881A /* classObject.swift */; };
-		E78CC6E61B2928A800F8881A /* university.csv in Resources */ = {isa = PBXBuildFile; fileRef = E78CC6E51B2928A800F8881A /* university.csv */; };
 		E78CC6EA1B292A7400F8881A /* UniObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CC6E91B292A7400F8881A /* UniObject.swift */; };
+		E78CC6EE1B29429C00F8881A /* university.csv in Resources */ = {isa = PBXBuildFile; fileRef = E78CC6ED1B29429C00F8881A /* university.csv */; };
 		E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		0428AB991B22CBCE000CE23C /* universityProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = universityProfileView.swift; sourceTree = "<group>"; };
 		043FA9761B28A55F00EA03EC /* ChancesViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChancesViewTableViewController.swift; sourceTree = "<group>"; };
 		043FA9781B28B1CD00EA03EC /* ChancesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChancesViewController.swift; sourceTree = "<group>"; };
+		043FA9AC1B29247900EA03EC /* Uni_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uni_List.swift; sourceTree = "<group>"; };
+		043FA9AE1B29276600EA03EC /* Uni_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uni_cell.swift; sourceTree = "<group>"; };
 		045399EA1B266E6000F92B0B /* blackback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackback.png; sourceTree = "<group>"; };
 		0AD32CE81B292B3800E65D17 /* ClassListViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListViewTableViewController.swift; sourceTree = "<group>"; };
 		0AD32CEA1B292B6D00E65D17 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,8 +81,8 @@
 		E74621061B22F15C00BE4808 /* classes_short.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes_short.csv; sourceTree = "<group>"; };
 		E74621081B22F25F00BE4808 /* ImportCSVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCSVController.swift; sourceTree = "<group>"; };
 		E78CC6E11B2924C500F8881A /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
-		E78CC6E51B2928A800F8881A /* university.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = university.csv; path = ../../../../../Downloads/files/university.csv; sourceTree = "<group>"; };
 		E78CC6E91B292A7400F8881A /* UniObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniObject.swift; sourceTree = "<group>"; };
+		E78CC6ED1B29429C00F8881A /* university.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = university.csv; sourceTree = "<group>"; };
 		E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPA_Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +134,7 @@
 				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
 				E74621081B22F25F00BE4808 /* ImportCSVController.swift */,
 				E74621061B22F15C00BE4808 /* classes_short.csv */,
-				E78CC6E51B2928A800F8881A /* university.csv */,
+				E78CC6ED1B29429C00F8881A /* university.csv */,
 				E74621001B22E74E00BE4808 /* classes.csv */,
 				040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */,
 				040BF99F1B1D51B400713061 /* Main.storyboard */,
@@ -284,7 +287,7 @@
 			files = (
 				045399EB1B266E6000F92B0B /* blackback.png in Resources */,
 				040BF9A11B1D51B400713061 /* Main.storyboard in Resources */,
-				E78CC6E61B2928A800F8881A /* university.csv in Resources */,
+				E78CC6EE1B29429C00F8881A /* university.csv in Resources */,
 				040BF9A61B1D51B400713061 /* LaunchScreen.xib in Resources */,
 				E74621071B22F15C00BE4808 /* classes_short.csv in Resources */,
 				E74621011B22E74E00BE4808 /* classes.csv in Resources */,
