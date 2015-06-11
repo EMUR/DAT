@@ -65,55 +65,66 @@ class ImportCSVController: UIViewController, NSCoding {
                 
                 var fetchRequest = NSFetchRequest(entityName: "ClassObject")
                 
-                let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [NSManagedObject]
+                let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [classObject]
                 
 
                 if results.count == 0
                 {
-                    var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: MOC!) as classObject
+                    for i in 0...rows - 1 {
+                        
+                        var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: MOC!) as classObject
+
+                        // Get course area
+                        //println(csv.rows[i]["area"]!)
+                        //courses.igetc_area = csv.rows[i]["area"]!
+                        courses.setValue(csv.rows[i]["area"]!, forKey: "igetc_area")
+
+                        // Get course sub-area
+                        //println(csv.rows[i]["sub_area"]!)
+                        //courses.igetc_suba = csv.rows[i]["sub_area"]!
+                        courses.setValue(csv.rows[i]["sub_area"]!, forKey: "igetc_suba")
+
+                        // Get course department
+                        //println(csv.rows[i]["dept"]!)
+                        //courses.department = csv.rows[i]["dept"]!
+                        courses.setValue(csv.rows[i]["dept"]!, forKey: "department")
+
+                        // Get course number
+                        //println(csv.rows[i]["course_num"]!)
+                        //courses.course_num = csv.rows[i]["course_num"]!
+                        courses.setValue(csv.rows[i]["course_num"]!, forKey: "course_num")
+
+                        // Get course title
+                        let course_title = csv.rows[i]["title"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        //println(course_title)
+                        //courses.course_tle = course_title
+                        courses.setValue(course_title, forKey: "course_tle")
+
+                        // Get course description
+                        let course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        //println(course_description)
+                        //courses.course_des = course_description
+                        courses.setValue(course_description, forKey: "course_des")
                     
-                                        for i in 0...rows - 1 {
-                    
-                                            // Get course area
-                                            //println(csv.rows[i]["area"]!)
-                                            courses.igetc_area = csv.rows[i]["area"]!
-                    
-                                            // Get course sub-area
-                                            //println(csv.rows[i]["sub_area"]!)
-                                            courses.igetc_suba = csv.rows[i]["sub_area"]!
-                    
-                                            // Get course department
-                                            //println(csv.rows[i]["dept"]!)
-                                            courses.department = csv.rows[i]["dept"]!
-                    
-                                            // Get course number
-                                            //println(csv.rows[i]["course_num"]!)
-                                            courses.course_num = csv.rows[i]["course_num"]!
-                    
-                                            // Get course title
-                                            let course_title = csv.rows[i]["title"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
-                                            courses.course_tle = course_title
-                    
-                                            // Get course description
-                                            let course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
-                                            //println(course_description)
-                                            courses.course_des = course_description
-                                        
-                                            // Get course units
-                                            //println(csv.rows[i]["units"]!)0
-                                            courses.course_unt = csv.rows[i]["units"]!
+                        // Get course units
+                        //println(csv.rows[i]["units"]!)0
+                        //courses.course_unt = csv.rows[i]["units"]!
+                        courses.setValue(csv.rows[i]["units"]!, forKey: "course_unt")
+                        
+                        println(courses.description)
+                        
                     }
+                    
+                    // Save
+                    saveContext(MOC!)
                     
   
                 }
                 else
                 {
                     println("Results are not null")
-                    println(results)
+                    println(results[0].course_des)
                 }
-                
-                // Create object
-//                var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: myMOC) as classObject
                 
                 
             } // End of CSVBuild
@@ -132,6 +143,15 @@ class ImportCSVController: UIViewController, NSCoding {
     }
     */
 
+}
+
+func saveContext (moc : NSManagedObjectContext) {
+    var error: NSError? = nil
+    if moc.hasChanges && !moc.save(&error) {
+        NSLog("Unresolved error \(error), \(error!.userInfo)")
+        //ABORT ONLY DONE FOR TESTING
+        abort()
+    }
 }
 
 func load_data(myMOC: NSManagedObjectContext) -> [classObject] {
