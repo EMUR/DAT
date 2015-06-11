@@ -26,6 +26,9 @@
 		043FA9B01B29276600EA03EC /* Uni_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9AE1B29276600EA03EC /* Uni_cell.swift */; };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b1a6d6d... fix
+=======
 >>>>>>> parent of b1a6d6d... fix
 =======
 >>>>>>> parent of b1a6d6d... fix
@@ -82,6 +85,9 @@
 		043FA9AE1B29276600EA03EC /* Uni_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uni_cell.swift; sourceTree = "<group>"; };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b1a6d6d... fix
+=======
 >>>>>>> parent of b1a6d6d... fix
 =======
 >>>>>>> parent of b1a6d6d... fix
@@ -174,7 +180,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				E78CC6EF1B2945D000F8881A /* classObject.swift */,
+=======
+>>>>>>> parent of b1a6d6d... fix
 =======
 >>>>>>> parent of b1a6d6d... fix
 =======

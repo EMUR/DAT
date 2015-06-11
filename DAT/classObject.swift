@@ -23,12 +23,15 @@ class classObject: NSManagedObject {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
 >>>>>>> parent of b1a6d6d... fix
 }
 =======
+=======
+>>>>>>> parent of b1a6d6d... fix
 =======
 >>>>>>> parent of b1a6d6d... fix
 
