@@ -1,26 +1,18 @@
 //
-//  IGETCAreasView.swift
+//  ClassListViewTableViewController.swift
 //  DAT
 //
-//  Created by E on 6/3/15.
+//  Created by Jyoti Bhardwaj on 6/12/15.
 //  Copyright (c) 2015 Eyad_Neesha_Adeeb_Ehab. All rights reserved.
 //
 
 import UIKit
 
-class IGETCAreasView: UITableViewController {
+class ClassListViewTableViewController: UITableViewController {
 
-    var IGETCSections = [String]()
-    var initObject : [classObject] = []
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        IGETCSections = ["Area 1","Area 2","Area 3","Area 4","Area 5","Area 6"]
-        var nib = UINib(nibName: "AreaCustomCell", bundle: nil)
-        
-        tableView.registerNib(nib, forCellReuseIdentifier: "AreaCell")
-       
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,43 +30,24 @@ class IGETCAreasView: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return IGETCSections.count
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AreaCell", forIndexPath: indexPath) as AreaCustomCell
-        
-        cell.bounds.size.width = self.tableView.bounds.width
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
-        cell.AreaText.text = self.IGETCSections[indexPath.row]
-        cell.ClassesCount.text = "0/10"
+        // Configure the cell...
 
         return cell
     }
-    
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "Details") {
-        
-            var segueObject : classObject
-            var indPath : NSIndexPath
-
-            let classViewController = segue.destinationViewController as ClassListViewTableViewController
-            indPath = self.tableView.indexPathForSelectedRow()!
-            segueObject = initObject[indPath.row]
-            
-         //classViewController.courseLabel = segueObject.course_tle
-            
-            
-        }
-    }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
