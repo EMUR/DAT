@@ -10,6 +10,13 @@ import UIKit
 
 class ClassListViewTableViewController: UITableViewController {
 
+    var IGETCSections = ""
+    
+    override func viewDidLayoutSubviews() {
+        self.navigationController?.navigationBar.translucent = false
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

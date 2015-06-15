@@ -35,7 +35,7 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         
         // Go through the results and append the logo names
         for i in 0...results.count - 1 {
-            let image_label = results[i].uni_acrn + "L"
+            let image_label = results[i].uni_acrn + "LB"
             Uni_Arrays.append(image_label)
         }
         
@@ -64,6 +64,10 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let w = UIScreen.mainScreen().bounds.width/2
         return CGSize(width: w, height: w)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+     
     }
     
     

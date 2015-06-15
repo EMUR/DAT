@@ -11,8 +11,10 @@ import UIKit
 class IGETCAreasView: UITableViewController {
 
     var IGETCSections = [String]()
-    var initObject : [classObject] = []
 
+    override func viewWillLayoutSubviews() {
+        self.tableView.autoresizingMask = UIViewAutoresizing.FlexibleHeight
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,10 @@ class IGETCAreasView: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("Details", sender: self)
+    }
+    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "Details") {
         
@@ -67,7 +73,7 @@ class IGETCAreasView: UITableViewController {
 
             let classViewController = segue.destinationViewController as ClassListViewTableViewController
             indPath = self.tableView.indexPathForSelectedRow()!
-            segueObject = initObject[indPath.row]
+            classViewController.IGETCSections = self.IGETCSections[indPath.row]
             
          //classViewController.courseLabel = segueObject.course_tle
             
