@@ -16,10 +16,14 @@ class universityProfileView: UITableViewController {
     @IBOutlet weak var uni_city: UILabel!
     @IBOutlet weak var uni_rank: UILabel!
     @IBOutlet weak var uni_avgpa: UILabel!
+    @IBOutlet weak var uni_logo: UIImageView!
+    var cellH : CGFloat = 60.0
+    
     @IBOutlet var uni_map: MKMapView!
+    
     var results : [UniObject] = []
     
-    //GEO CODE PURPOSES
+    //For Geo code purposes
     var university_name : String!
     var coords: CLLocationCoordinate2D?
     
@@ -28,7 +32,9 @@ class universityProfileView: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
+
+
         /* Conduct DB request */
         
         // Create Request
@@ -49,6 +55,7 @@ class universityProfileView: UITableViewController {
         
         
         /* Feed data points */
+        uni_logo.image  = UIImage(named: university_acronym + "LB")
         var university_info = results[0].uni_desc
         university_info = dropFirst(university_info)
         university_info = dropLast(university_info)
@@ -115,6 +122,16 @@ class universityProfileView: UITableViewController {
             UIApplication.sharedApplication().openURL(url)
         }
     }
+    
+    @IBAction func read_more(sender: AnyObject) {
+        var cell = self.view.viewWithTag(3) as UITableViewCell
+        UIView.animateWithDuration(0.5, animations: {
+            cell.bounds.size.height = 600
+            self.view.layoutIfNeeded()
+        })
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
