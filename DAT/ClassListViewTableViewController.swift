@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ClassListViewTableViewController: UITableViewController {
 
     var IGETCSections = ""
+    var Subjects = [classObject]()
+    var sectionNum = 0
     
     override func viewDidLayoutSubviews() {
         self.navigationController?.navigationBar.translucent = false
@@ -19,7 +22,33 @@ class ClassListViewTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let str = Array(IGETCSections)[(IGETCSections as NSString).length - 1]
+        let string = "\(str)"
+        sectionNum = string.toInt()!
+        // Retrieve University Data
+        var saveErr : NSError?
+        let del = UIApplication.sharedApplication().delegate as AppDelegate!
+        let MOC = del.managedObjectContext
+        var fetchRequest = NSFetchRequest(entityName: "ClassObject")
+        let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [classObject]
+        
+        // Go through the results and append the logo names
+        for i in 0...results.count - 1 {
+            if results[i].igetc_area.toInt() == sectionNum
+            {
+                Subjects.append(results[i])
+            }
+        }
+        
+//        // Sort the Array
+//        Uni_Arrays.sort {
+//            return $0 < $1
+//        }
+//        
+//        // Testing purposes
+//        println(Uni_Arrays)
 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,24 +66,26 @@ class ClassListViewTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return Subjects.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ClassCell", forIndexPath: indexPath) as ClassListTableViewCell
 
-        // Configure the cell...
+        cell.courseLabel.text = Subjects[indexPath.row].course_tle
+        cell.courseNum.text = Subjects[indexPath.row].course_num
+        cell.courseDept.text = Subjects[indexPath.row].department
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -11,15 +11,15 @@ import UIKit
 class AreaCustomCell: UITableViewCell {
     @IBOutlet weak var ClassesCount: UILabel!
     @IBOutlet weak var AreaText: UILabel!
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.borderColor = UIColor.whiteColor().CGColor
-        self.layer.borderWidth = 2.0
+//        self.layer.borderColor = UIColor(white: 0.34, alpha: 1.0).CGColor
+//        self.layer.borderWidth = 1.0
         // Initialization code
     }
-    
+
+
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

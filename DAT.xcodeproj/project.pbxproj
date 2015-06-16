@@ -15,7 +15,6 @@
 		040BF9B21B1D51B400713061 /* DATTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9B11B1D51B400713061 /* DATTests.swift */; };
 		040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */; };
 		040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9F81B1FF08300713061 /* AreaCustomCell.swift */; };
-		040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9F91B1FF08300713061 /* AreaCustomCell.xib */; };
 		0428AB911B22BDCB000CE23C /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0428AB901B22BDCB000CE23C /* SwiftCSV.framework */; };
 		0428AB9A1B22CBCE000CE23C /* universityProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428AB991B22CBCE000CE23C /* universityProfileView.swift */; };
 		043FA9771B28A55F00EA03EC /* ChancesViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9761B28A55F00EA03EC /* ChancesViewTableViewController.swift */; };
@@ -61,7 +60,6 @@
 		040BF9B11B1D51B400713061 /* DATTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATTests.swift; sourceTree = "<group>"; };
 		040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGETCAreasView.swift; sourceTree = "<group>"; };
 		040BF9F81B1FF08300713061 /* AreaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaCustomCell.swift; sourceTree = "<group>"; };
-		040BF9F91B1FF08300713061 /* AreaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaCustomCell.xib; sourceTree = "<group>"; };
 		0428AB901B22BDCB000CE23C /* SwiftCSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCSV.framework; path = "Pods/../build/Debug-iphoneos/Pods/SwiftCSV.framework"; sourceTree = "<group>"; };
 		0428AB941B22BF47000CE23C /* DAT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DAT-Bridging-Header.h"; sourceTree = "<group>"; };
 		0428AB991B22CBCE000CE23C /* universityProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = universityProfileView.swift; sourceTree = "<group>"; };
@@ -140,14 +138,13 @@
 				040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */,
 				0A7C1CE81B2BE64600E85B00 /* ClassListViewTableViewController.swift */,
 				040BF99F1B1D51B400713061 /* Main.storyboard */,
+				040BF9F81B1FF08300713061 /* AreaCustomCell.swift */,
 				043FA9AE1B29276600EA03EC /* Uni_cell.swift */,
 				043FA9AC1B29247900EA03EC /* Uni_List.swift */,
 				043FA9761B28A55F00EA03EC /* ChancesViewTableViewController.swift */,
 				0A7C1CEC1B2BEA1300E85B00 /* ClassListTableViewCell.swift */,
 				043FA9781B28B1CD00EA03EC /* ChancesViewController.swift */,
 				045399EA1B266E6000F92B0B /* blackback.png */,
-				040BF9F81B1FF08300713061 /* AreaCustomCell.swift */,
-				040BF9F91B1FF08300713061 /* AreaCustomCell.xib */,
 				040BF9A21B1D51B400713061 /* Images.xcassets */,
 				040BF9A41B1D51B400713061 /* LaunchScreen.xib */,
 				0428AB991B22CBCE000CE23C /* universityProfileView.swift */,
@@ -295,7 +292,6 @@
 				E74621071B22F15C00BE4808 /* classes_short.csv in Resources */,
 				E74621011B22E74E00BE4808 /* classes.csv in Resources */,
 				040BF9A31B1D51B400713061 /* Images.xcassets in Resources */,
-				040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
