@@ -11,6 +11,8 @@ import UIKit
 class Uni_cell: UICollectionViewCell {
     @IBOutlet weak var Uni_logo: UIImageView!
     
+    var acron : String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,9 +31,10 @@ class Uni_cell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
-    func SetUpImage(imgS:String)
+    func SetUpImage(imgS:String, uni_acronym:String)
     {
-       Uni_logo.image = UIImage(named: imgS)
+        self.acron = uni_acronym
+        Uni_logo.image = UIImage(named: imgS)
     }
     
    

@@ -45,7 +45,7 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         }
         
         // Testing purposes
-        println(Uni_Arrays)
+        // println(Uni_Arrays) //[UCBLB, UCDLB, UCILB, UCLALB, UCMLB, UCRLB, UCSBLB, UCSCLB, UCSDLB]
         
         
         // Do any additional setup after loading the view.
@@ -53,9 +53,11 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = MainCollection.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath:indexPath) as Uni_cell
-                
-        cell.SetUpImage("\(Uni_Arrays[indexPath.row])")
         
+        var university_acrn = Uni_Arrays[indexPath.row]
+        university_acrn = dropLast(dropLast(university_acrn))
+        
+        cell.SetUpImage("\(Uni_Arrays[indexPath.row])", uni_acronym: university_acrn)
       
         return cell
     }
@@ -67,7 +69,16 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-     
+        // Check for indexpath and cell
+        if let cell = collectionView.cellForItemAtIndexPath(indexPath) {
+            
+            // Conduct segue
+            performSegueWithIdentifier("explore_uni", sender: cell)
+            
+        } else {
+            // Call Error
+            println("Segue process failed hard!")
+        }
     }
     
     
@@ -81,14 +92,16 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     }
     
 
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "explore_uni"){
+            let university_detail = segue.destinationViewController as universityProfileView
+            let cell = sender as Uni_cell
+            university_detail.university_acronym = cell.acron
+        } // End of segue identifier
     }
-    */
-
 }
