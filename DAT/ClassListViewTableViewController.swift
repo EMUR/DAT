@@ -11,6 +11,7 @@ import CoreData
 
 class ClassListViewTableViewController: UITableViewController {
 
+
     var IGETCSections = ""
     var Subjects = [classObject]()
     var sectionNum = 0
@@ -22,6 +23,7 @@ class ClassListViewTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let str = Array(IGETCSections)[(IGETCSections as NSString).length - 1]
         let string = "\(str)"
         sectionNum = string.toInt()!
@@ -79,12 +81,15 @@ class ClassListViewTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ClassCell", forIndexPath: indexPath) as ClassListTableViewCell
 
+        cell.courseDept.adjustsFontSizeToFitWidth = true
         cell.courseLabel.text = Subjects[indexPath.row].course_tle
-        cell.courseNum.text = Subjects[indexPath.row].course_num
-        cell.courseDept.text = Subjects[indexPath.row].department
+        cell.courseNum.text = "Course Number : \(Subjects[indexPath.row].course_num)"
+        cell.courseDept.text = "Department: \(Subjects[indexPath.row].department)"
 
         return cell
     }
+    
+    
 
 
     /*

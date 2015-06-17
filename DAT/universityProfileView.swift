@@ -60,7 +60,7 @@ class universityProfileView: UITableViewController {
         
         
         /* Feed data points */
-        uni_logo.image  = UIImage(named: university_acronym + "LB")
+        uni_logo.image  = UIImage(named: university_acronym + "L")
         var university_info = results[0].uni_desc
         university_info = dropFirst(university_info)
         university_info = dropLast(university_info)

@@ -57,6 +57,7 @@ class IGETCAreasView: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("Details", sender: self)
+        self.mainTable.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
