@@ -17,6 +17,7 @@ class universityProfileView: UITableViewController {
     @IBOutlet weak var uni_rank: UILabel!
     @IBOutlet weak var uni_avgpa: UILabel!
     @IBOutlet weak var uni_logo: UIImageView!
+    var expanded = false
     var cellH : CGFloat = 60.0
     
     @IBOutlet var uni_map: MKMapView!
@@ -27,16 +28,20 @@ class universityProfileView: UITableViewController {
     var university_name : String!
     var coords: CLLocationCoordinate2D?
     
+    override func viewWillLayoutSubviews() {
+        self.tableView.backgroundColor = UIColor.clearColor()
+    }
+    
     //For DB purposes
     var university_acronym : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
      
-
-
+        tableView.rowHeight = UITableViewAutomaticDimension
         /* Conduct DB request */
         
+        self.uni_desc.setContentOffset(CGPoint(x: 100, y: 100), animated: true)
         // Create Request
         var request = NSFetchRequest(entityName: "UniObject")
         request.returnsObjectsAsFaults = false;
@@ -122,32 +127,34 @@ class universityProfileView: UITableViewController {
             UIApplication.sharedApplication().openURL(url)
         }
     }
+
     
-    @IBAction func read_more(sender: AnyObject) {
-        var cell = self.view.viewWithTag(3) as UITableViewCell
-        UIView.animateWithDuration(0.5, animations: {
-            cell.bounds.size.height = 600
-            self.view.layoutIfNeeded()
-        })
-        tableView.reloadData()
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return UITableViewAutomaticDimension
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y < -100.0)
+        {
 
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                 self.tableView.transform = CGAffineTransformTranslate(self.tableView.transform, 0.0, self.tableView.bounds.height - 100.0)
+                }, completion: { (done:Bool) -> Void in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+            })
+            
+
+        }
+    }
     // MARK: - Table view data source
 
-     /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.
