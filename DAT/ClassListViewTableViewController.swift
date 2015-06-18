@@ -27,29 +27,20 @@ class ClassListViewTableViewController: UITableViewController {
         let str = Array(IGETCSections)[(IGETCSections as NSString).length - 1]
         let string = "\(str)"
         sectionNum = string.toInt()!
-        // Retrieve University Data
+        // Retrieve course Data
         var saveErr : NSError?
         let del = UIApplication.sharedApplication().delegate as AppDelegate!
         let MOC = del.managedObjectContext
         var fetchRequest = NSFetchRequest(entityName: "ClassObject")
         let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [classObject]
         
-        // Go through the results and append the logo names
+        // Go through the results and collect the subjects
         for i in 0...results.count - 1 {
             if results[i].igetc_area.toInt() == sectionNum
             {
                 Subjects.append(results[i])
             }
         }
-        
-//        // Sort the Array
-//        Uni_Arrays.sort {
-//            return $0 < $1
-//        }
-//        
-//        // Testing purposes
-//        println(Uni_Arrays)
-
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

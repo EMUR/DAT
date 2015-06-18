@@ -18,7 +18,5 @@ class classObject: NSManagedObject {
     @NSManaged var department: String //Course Department
     @NSManaged var igetc_area: String //Course IGETC Area
     @NSManaged var igetc_suba: String //Course IGETC Sub Area
-    @NSManaged var course_tkn: NSNumber //Course Taken
-    @NSManaged var course_grd: String //Course Grade
     
 }

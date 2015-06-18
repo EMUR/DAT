@@ -188,12 +188,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         // Get course units
                         courses.setValue(csv.rows[i]["units"]!, forKey: "course_unt")
                         
-                        //Apply default course grade
-                        courses.setValue(nil, forKey: "course_grd")
-                        
-                        //Apply default course taken
-                        courses.setValue(0, forKey: "course_tkn")
-                        
                     }
                     // Save
                     saveContext(MOC!)

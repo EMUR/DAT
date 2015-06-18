@@ -2,14 +2,17 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="ClassObject" representedClassName="DAT.classObject" syncable="YES">
         <attribute name="course_des" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="course_grd" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
         <attribute name="course_num" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="course_tkn" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="course_tle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="course_unt" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="department" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="igetc_area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="igetc_suba" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CourseTaken" representedClassName="CourseTaken" syncable="YES">
+        <attribute name="class_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="course_grade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="course_quarter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="UniObject" representedClassName="DAT.UniObject" syncable="YES">
         <attribute name="uni_acrn" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,8 +25,17 @@
         <attribute name="uni_urla" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uni_year" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="UserObject" representedClassName="UserObject" syncable="YES">
+        <attribute name="courses_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gpa" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uni_choice" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="ClassObject" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="ClassObject" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="UniObject" positionX="-63" positionY="54" width="128" height="180"/>
+        <element name="UserObject" positionX="-45" positionY="108" width="128" height="120"/>
+        <element name="CourseTaken" positionX="-27" positionY="117" width="128" height="90"/>
     </elements>
 </model>

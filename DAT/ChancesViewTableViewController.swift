@@ -7,16 +7,73 @@
 //
 
 import UIKit
+import CoreData
 
 class ChancesViewTableViewController: UITableViewController {
 
     override func viewWillLayoutSubviews() {
         self.tableView.bounds.size.width = UIScreen.mainScreen().bounds.width
     }
+    
+     /****** Chances Calculator ******/
+    func calculate_gpa_chance(usr_gpa: Double, uni_gpa: Double) -> String {
+        
+        // Fixed Variable - STD DEV of GPAs
+        var std_dev_uni = 0.17
+        
+        // Variables needed
+        var avg_uni_gpa = uni_gpa
+        var avg_usr_gpa = usr_gpa
+        
+        // Normal Distribution Calculator
+        var percentile = (avg_usr_gpa - avg_uni_gpa) / std_dev_uni
+        
+        // Utilize Z value calculations to provide info
+        
+        if percentile >= 0 { // At least above 50% percentile
+            
+            if percentile > 0.675 { // If more than the 75% percentile
+                
+                return "High"
+                
+            } else { // If between 50% - 75% percentile
+                
+                return "Above Average"
+            }
+            
+        } else if percentile < 0 { // At least above 50% percentile
+            
+            if abs(percentile) > 0.675 { // If less than 25% percentile
+                
+                return "Low"
+                
+            } else { // If less than 25% - 50% percentile
+                
+                return "Average"
+            }
+        }
+        /*** End of Chances Caculator ***/
+        
+        return ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Retrieve University Data
+        var saveErr : NSError?
+        let del = UIApplication.sharedApplication().delegate as AppDelegate!
+        let MOC = del.managedObjectContext
+        var fetchRequest = NSFetchRequest(entityName: "UniObject")
+        let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
         
+        var usr_gpa = 3.75
+        
+        for uni in results {
+            var outcome = calculate_gpa_chance(usr_gpa, uni_gpa: Double(uni.uni_agpa))
+            println("At \(uni.uni_name), your probability to get in is \(outcome)")
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
