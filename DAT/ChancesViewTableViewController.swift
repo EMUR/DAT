@@ -14,6 +14,11 @@ class ChancesViewTableViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         self.tableView.bounds.size.width = UIScreen.mainScreen().bounds.width
     }
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+
     
      /****** Chances Calculator ******/
     func calculate_gpa_chance(usr_gpa: Double, uni_gpa: Double) -> String {

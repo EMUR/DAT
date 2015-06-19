@@ -15,6 +15,11 @@ class Uni_List: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     
     var Uni_Arrays = [String]()
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         MainCollection.delegate = self
