@@ -182,7 +182,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         courses.setValue(course_title, forKey: "course_tle")
                         
                         // Get course description
-                        let course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        var course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        var last = dropLast(course_description)
+                        if last == "." {
+                            course_description = course_description + last
+                        } else {
+                            course_description = course_description + last + "."
+                        }
+                        
                         courses.setValue(course_description, forKey: "course_des")
                         
                         // Get course units
