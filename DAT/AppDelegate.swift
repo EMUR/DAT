@@ -183,11 +183,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                         // Get course description
                         var course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
-                        var last = dropLast(course_description)
-                        if last == "." {
-                            course_description = course_description + last
-                        } else {
-                            course_description = course_description + last + "."
+                        var course_des_string = course_description as NSString
+                        var des_size = course_des_string.length
+                        var last = Array(course_description)[des_size - 1]
+                        
+                        if String(last) != "." {
+                            course_description = course_description + "."
                         }
                         
                         courses.setValue(course_description, forKey: "course_des")
