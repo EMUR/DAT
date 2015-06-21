@@ -81,6 +81,28 @@ class ClassListViewTableViewController: UITableViewController {
     }
     
     
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+
+        performSegueWithIdentifier("click", sender: indexPath.row)
+        
+    }
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+
+        if (segue.identifier == "click")
+        {
+            let class_detail = segue.destinationViewController as ClassDetails
+            class_detail.classInfo = Subjects[sender as Int]
+            
+        }// End of segue identifier
+    }
 
 
     /*
