@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z5Z-GC-aTo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z5Z-GC-aTo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="2986" y="-470"/>
         </scene>
-        <!--Item-->
+        <!--Admission-->
         <scene sceneID="WfA-cI-x9U">
             <objects>
                 <viewController id="Vsb-jK-wzZ" customClass="ChancesViewController" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
@@ -153,7 +153,7 @@
                             <constraint firstItem="2eD-qh-V2X" firstAttribute="top" secondItem="SyR-JY-ix9" secondAttribute="bottom" id="r8N-2M-GU6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="JQG-M3-wzG"/>
+                    <tabBarItem key="tabBarItem" title="Admission" image="Scales" id="JQG-M3-wzG"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="GPA" destination="l7t-Qt-ReX" id="Spd-MZ-F7w"/>
@@ -696,7 +696,7 @@
             </objects>
             <point key="canvasLocation" x="4351" y="-269"/>
         </scene>
-        <!--Item-->
+        <!--Class List-->
         <scene sceneID="kRr-6b-5tg">
             <objects>
                 <viewController id="zaW-9t-CDw" customClass="IGETCAreasView" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
@@ -758,7 +758,7 @@
                             <constraint firstAttribute="trailing" secondItem="kM3-8r-swe" secondAttribute="trailing" id="wAS-mj-QqB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pjx-rq-3gx"/>
+                    <tabBarItem key="tabBarItem" title="Class List" image="List" id="pjx-rq-3gx"/>
                     <connections>
                         <outlet property="mainTable" destination="kM3-8r-swe" id="876-Tu-cDZ"/>
                         <segue destination="gWW-Kg-VDM" kind="show" identifier="Details" id="hRB-sN-1ws"/>
@@ -768,7 +768,7 @@
             </objects>
             <point key="canvasLocation" x="2268" y="-470"/>
         </scene>
-        <!--Item-->
+        <!--Universities-->
         <scene sceneID="Ws5-99-2pe">
             <objects>
                 <viewController id="ght-5R-QtP" customClass="Uni_List" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
@@ -831,7 +831,7 @@
                             <constraint firstItem="f2j-zu-aYE" firstAttribute="leading" secondItem="db0-7s-Byg" secondAttribute="leading" id="xe6-dU-6u4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="iZ4-AF-e6z"/>
+                    <tabBarItem key="tabBarItem" title="Universities" image="University" id="iZ4-AF-e6z"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="MainCollection" destination="f2j-zu-aYE" id="O0q-Bh-Hn7"/>
@@ -868,7 +868,7 @@
                                                 <imageView userInteractionEnabled="NO" alpha="0.64999999999999969" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blackback.png" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-lv-bSQ">
                                                     <rect key="frame" x="0.0" y="-94" width="600" height="394"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of California" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-8b-BPT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="University of California" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-8b-BPT">
                                                     <rect key="frame" x="8" y="194" width="584" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="46" id="j15-4L-FYN"/>
@@ -877,7 +877,7 @@
                                                     <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCBL" translatesAutoresizingMaskIntoConstraints="NO" id="diV-QG-qcp">
+                                                <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="UCBL" translatesAutoresizingMaskIntoConstraints="NO" id="diV-QG-qcp">
                                                     <rect key="frame" x="232" y="56" width="137" height="138"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="137" id="1Lt-pH-gbm"/>
@@ -892,7 +892,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4y-PQ-9y1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4y-PQ-9y1">
                                                     <rect key="frame" x="8" y="233" width="584" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -923,7 +923,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tKP-Zj-7po" id="v16-RN-n6C">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-x9-bkl">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-x9-bkl">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="39"/>
                                                     <color key="backgroundColor" red="0.22944025030000001" green="0.66731747880000003" blue="0.84211253159999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Website">
@@ -1044,7 +1044,7 @@
             </objects>
             <point key="canvasLocation" x="3625" y="198"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="1ki-kv-Jh6">
             <objects>
                 <viewController id="86I-Lk-yzF" customClass="SearchViewController" customModule="DAT" customModuleProvider="target" sceneMemberID="viewController">
@@ -1124,7 +1124,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jYD-F7-S4N"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="jYD-F7-S4N"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="results" destination="QqL-M6-MAx" id="l3l-s9-Irm"/>
@@ -1310,6 +1310,9 @@
     </scenes>
     <resources>
         <image name="Info2" width="50" height="50"/>
+        <image name="List" width="25" height="25"/>
+        <image name="Profile" width="25" height="25"/>
+        <image name="Scales" width="25" height="25"/>
         <image name="UCB" width="400" height="265"/>
         <image name="UCBL" width="130" height="130"/>
         <image name="UCDL" width="250" height="250"/>
@@ -1320,10 +1323,11 @@
         <image name="UCSBL" width="250" height="250"/>
         <image name="UCSCL" width="250" height="250"/>
         <image name="UCSDL" width="250" height="250"/>
+        <image name="University" width="25" height="25"/>
         <image name="blackback.png" width="600" height="600"/>
         <image name="info" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bW5-eO-xh4"/>
+        <segue reference="ID3-Ua-SBp"/>
     </inferredMetricsTieBreakers>
 </document>
