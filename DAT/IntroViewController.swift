@@ -10,6 +10,9 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
+    @IBOutlet weak var first_name: UITextField!
+    @IBOutlet weak var last_name: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
