@@ -17,6 +17,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     var del:AppDelegate!
     var arr = [String]()
     var acr = [String]()
+    var classes = [classObject]()
     
 
     override func viewWillAppear(animated: Bool) {
@@ -90,7 +91,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
                 if ((uni as classObject).course_tle.lowercaseString.rangeOfString(searchBar.text.lowercaseString) != nil)
                 {
                     let str:String  = (uni as classObject).course_tle
-                    
+                    classes.append(uni as classObject)
                         arr.append(str)
                 }
             }
@@ -121,7 +122,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         
         if (sections.selectedSegmentIndex == 0)
         {
-        performSegueWithIdentifier("click", sender: self)
+        performSegueWithIdentifier("click", sender: indexPath.row)
         }
         else
         {
@@ -137,7 +138,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         if(segue.identifier == "explore_uni"){
             let university_detail = segue.destinationViewController as universityProfileView
             university_detail.university_acronym = acr[sender as Int]
-        } // End of segue identifier
+        }
+        else if (segue.identifier == "click")
+        {
+            let class_detail = segue.destinationViewController as ClassDetails
+            class_detail.classInfo = classes[sender as Int]
+            
+        }// End of segue identifier
     }
 
     
