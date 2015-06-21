@@ -9,7 +9,14 @@
 import UIKit
 import CoreData
 
+
+struct gpa {
+     static var usr_gpa = 3.75
+}
+
+
 class ChancesViewTableViewController: UITableViewController {
+
 
     override func viewWillLayoutSubviews() {
         self.tableView.bounds.size.width = UIScreen.mainScreen().bounds.width
@@ -22,8 +29,8 @@ class ChancesViewTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        
     }
+    
     
     override func viewDidLayoutSubviews() {
         // Retrieve University Data
@@ -32,13 +39,11 @@ class ChancesViewTableViewController: UITableViewController {
         let MOC = del.managedObjectContext
         var fetchRequest = NSFetchRequest(entityName: "UniObject")
         let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
-        
-        var usr_gpa = 3.75
         var chance = ""
         for uni in results {
             // Find out which tag to use:
             var uni_tag = uni_tag_system[uni.uni_acrn]
-            chance = calculate_gpa_chance(usr_gpa, uni_gpa: Double(uni.uni_agpa))
+            chance = calculate_gpa_chance(gpa.usr_gpa, uni_gpa: Double(uni.uni_agpa))
             var theLabel : UILabel? = self.view.viewWithTag(uni_tag!) as? UILabel
             switch chance {
                 case "High":

@@ -10,6 +10,7 @@ import UIKit
 
 class ChancesViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var GPA: UITextView!
+    @IBOutlet weak var chance: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,13 @@ class ChancesViewController: UIViewController, UITextViewDelegate {
             }
         case 4:
             textView.resignFirstResponder()
+            
+            gpa.usr_gpa = (self.GPA.text as NSString).doubleValue
+            
+            let vc = chance.subviews[0] as UITableView
+            
+            vc.reloadData()
+            
         default:
             return
         }
