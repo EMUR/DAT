@@ -25,6 +25,8 @@ class ChancesViewTableViewController: UITableViewController {
         self.navigationController?.navigationBarHidden = true
     }
     
+    
+    // Designate the tags and its associated universities
     var uni_tag_system : [String : Int] = ["UCB" : 500, "UCLA" : 501, "UCD" : 502, "UCSD" : 503, "UCSB" : 504, "UCI" : 505, "UCSC" : 506, "UCM" : 507, "UCR" : 508]
     
     override func viewDidAppear(animated: Bool) {
@@ -67,9 +69,6 @@ class ChancesViewTableViewController: UITableViewController {
         
         // Fixed Variable - STD DEV of GPAs
         var std_dev_uni = 0.17
-        
-        
-        //println(self.view.viewWithTag(uni_tag))
         
         // Variables needed
         var avg_uni_gpa = uni_gpa

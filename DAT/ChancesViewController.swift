@@ -32,7 +32,7 @@ class ChancesViewController: UIViewController, UITextViewDelegate {
             }
             else
             {
-            textView.text = "\(textView.text)."
+                textView.text = "\(textView.text)."
             }
         case 4:
             textView.resignFirstResponder()
@@ -44,7 +44,15 @@ class ChancesViewController: UIViewController, UITextViewDelegate {
             vc.reloadData()
             
         default:
-            return
+            // Added measure to ensure that the user cannot input GPA's more than 4.0
+            if ((textView.text as NSString).doubleValue > 4.0)
+            {
+                textView.text = ""
+            }
+            else
+            {
+                return
+            }
         }
     }
 
