@@ -70,6 +70,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         
         arr.removeAll(keepCapacity: false)
         acr.removeAll(keepCapacity: false)
+        classes.removeAll(keepCapacity: false)
 
         searchBar.resignFirstResponder()
         
