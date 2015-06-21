@@ -18,13 +18,53 @@ class ChancesViewTableViewController: UITableViewController {
         self.navigationController?.navigationBarHidden = true
     }
     
-
+    var uni_tag_system : [String : Int] = ["UCB" : 500, "UCLA" : 501, "UCD" : 502, "UCSD" : 503, "UCSB" : 504, "UCI" : 505, "UCSC" : 506, "UCM" : 507, "UCR" : 508]
     
-     /****** Chances Calculator ******/
+    override func viewDidAppear(animated: Bool) {
+        
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        // Retrieve University Data
+        var saveErr : NSError?
+        let del = UIApplication.sharedApplication().delegate as AppDelegate!
+        let MOC = del.managedObjectContext
+        var fetchRequest = NSFetchRequest(entityName: "UniObject")
+        let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
+        
+        var usr_gpa = 3.75
+        var chance = ""
+        for uni in results {
+            // Find out which tag to use:
+            var uni_tag = uni_tag_system[uni.uni_acrn]
+            chance = calculate_gpa_chance(usr_gpa, uni_gpa: Double(uni.uni_agpa))
+            var theLabel : UILabel? = self.view.viewWithTag(uni_tag!) as? UILabel
+            switch chance {
+                case "High":
+                theLabel?.textColor = UIColor(red:0.0, green:0.69, blue:0.42, alpha:1.0)
+                case "Above Average":
+                theLabel?.textColor = UIColor(red:0.2, green:0.6, blue:0.86, alpha:1.0)
+                case "Average":
+                theLabel?.textColor = UIColor(red:0.83, green:0.33, blue:0.0, alpha:1.0)
+                case "Low":
+                theLabel?.textColor = UIColor(red:0.85, green:0.12, blue:0.09, alpha:1.0)
+                default:
+                theLabel?.textColor = UIColor.blackColor()
+            }
+            
+            theLabel?.text = chance
+        }
+    }
+    
+    /****** Chances Calculator ******/
     func calculate_gpa_chance(usr_gpa: Double, uni_gpa: Double) -> String {
         
         // Fixed Variable - STD DEV of GPAs
         var std_dev_uni = 0.17
+        
+        
+        //println(self.view.viewWithTag(uni_tag))
         
         // Variables needed
         var avg_uni_gpa = uni_gpa
@@ -41,9 +81,11 @@ class ChancesViewTableViewController: UITableViewController {
                 
                 return "High"
                 
+                
             } else { // If between 50% - 75% percentile
                 
                 return "Above Average"
+                
             }
             
         } else if percentile < 0 { // At least above 50% percentile
@@ -65,21 +107,6 @@ class ChancesViewTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Retrieve University Data
-        var saveErr : NSError?
-        let del = UIApplication.sharedApplication().delegate as AppDelegate!
-        let MOC = del.managedObjectContext
-        var fetchRequest = NSFetchRequest(entityName: "UniObject")
-        let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
-        
-        var usr_gpa = 3.75
-        
-        for uni in results {
-            var outcome = calculate_gpa_chance(usr_gpa, uni_gpa: Double(uni.uni_agpa))
-            println("At \(uni.uni_name), your probability to get in is \(outcome)")
-            
-        }
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
