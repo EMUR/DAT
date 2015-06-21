@@ -60,18 +60,31 @@ class universityProfileView: UITableViewController {
         
         
         /* Feed data points */
+        
+        // Get the image of the university
         uni_logo.image  = UIImage(named: university_acronym + "L")
+        
+        // Get the description of the university, and clean it up
         var university_info = results[0].uni_desc
         university_info = dropFirst(university_info)
         university_info = dropLast(university_info)
+        university_info = university_info.stringByReplacingOccurrencesOfString("\\n", withString: "\n \n")
+        university_info = university_info.stringByReplacingOccurrencesOfString("\"\"", withString: "\"")
         uni_desc.text = university_info
+        
+        // Get university rank
         uni_rank.text = results[0].uni_rank
+        
+        // Get university Average GPA
         uni_avgpa.text = "\(results[0].uni_agpa)"
         
+        // Get university URL/website
         var url_link = results[0].uni_urla
         
         // Get city name only
         var uc_title  = "University of California - "
+        
+        // Trim university title to city only
         var uc_t_size = distance(uc_title.startIndex, uc_title.endIndex)
         var uc_name  = results[0].uni_name
         uni_city.text = uc_name.substringFromIndex(advance(minElement(indices(uc_name)), uc_t_size))
@@ -95,6 +108,7 @@ class universityProfileView: UITableViewController {
                     println("Geocode failed with error: \(error.localizedDescription)")
                 }
                 
+                // Did it find any location?
                 if placemarks.count > 0 {
                     let placemark = placemarks[0] as CLPlacemark
                     let location = placemark.location

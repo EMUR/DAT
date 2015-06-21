@@ -17,9 +17,6 @@ class UserObject: NSManagedObject {
     // Last name of the user
     @NSManaged var last_name: String
     
-    // A course id that which represents the ID of the courses table, which includes courses, grade, and the quarter the courses will be taken
-    @NSManaged var courses_id: String
-    
     // Users calculated GPA
     @NSManaged var gpa: NSNumber
     
