@@ -11,12 +11,6 @@ import CoreData
 
 class UserObject: NSManagedObject {
     
-    // First name of the user
-    @NSManaged var first_name: String
-    
-    // Last name of the user
-    @NSManaged var last_name: String
-    
     // Users calculated GPA
     @NSManaged var gpa: NSNumber
     

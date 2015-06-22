@@ -29,15 +29,13 @@
         <attribute name="uni_year" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="UserObject" representedClassName="UserObject" syncable="YES">
-        <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gpa" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uni_choice" optional="YES" attributeType="Transformable" syncable="YES"/>
     </entity>
     <elements>
         <element name="ClassObject" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="ClassTaken" positionX="-27" positionY="117" width="128" height="133"/>
         <element name="UniObject" positionX="-63" positionY="54" width="128" height="180"/>
-        <element name="UserObject" positionX="-45" positionY="108" width="128" height="103"/>
+        <element name="UserObject" positionX="-45" positionY="108" width="128" height="75"/>
     </elements>
 </model>
