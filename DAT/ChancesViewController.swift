@@ -26,6 +26,7 @@ class ChancesViewController: UIViewController, UITextViewDelegate {
         var user_data = MOC?.executeFetchRequest(fetchUserData, error: &saveErr) as [UserObject]
         if user_data.count == 0 {
             GPA.text = (gpa.usr_gpa as NSNumber).stringValue
+            memory_gpa = gpa.usr_gpa
         } else {
             var user_gpa = user_data[0].gpa
             var string_gpa = user_gpa.stringValue
