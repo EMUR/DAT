@@ -15,6 +15,7 @@ class ChooseUniTableViewController: UITableViewController {
     var universities : [UniObject] = []
     var checkMark : [Bool] = []
     var user_data : [UserObject] = []
+    var selectedIndexs: NSMutableArray! = []
     
     func retrieveDBResults() {
         // Retrieve University Data
@@ -27,16 +28,12 @@ class ChooseUniTableViewController: UITableViewController {
         //Retrieve Database information from the user
         var fetchUserData = NSFetchRequest(entityName: "UserObject")
         user_data = MOC?.executeFetchRequest(fetchUserData, error: &saveErr) as [UserObject]
-        
-        if user_data.count > 0 {
-            
-        } else {
-            checkMark = [false, false, false, false, false, false, false, false, false]
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,6 +41,11 @@ class ChooseUniTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         retrieveDBResults()
+        
+        for (var i = 0; i < universities.count ; i++)
+        {
+            checkMark.append(false)
+        }
         
     }
 
@@ -70,11 +72,17 @@ class ChooseUniTableViewController: UITableViewController {
         var cellObject : UniObject
         let cellIdentifier = "UniCell"
         let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier,forIndexPath: indexPath) as UniTableViewCell
-        
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+
         // Configure the cell...
         
         cellObject = self.universities[indexPath.row]
         
+        if self.selectedIndexs.containsObject(indexPath) {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryType.None
+        }
         cell.uni_name?.text = cellObject.uni_name
         cell.uni_logo?.image = UIImage(named: cellObject.uni_acrn + "L")
         return cell
@@ -82,20 +90,17 @@ class ChooseUniTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        checkMark[indexPath.row] = !(checkMark[indexPath.row])
-        
-        if checkMark[indexPath.row] {
-            
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+        if self.selectedIndexs.containsObject(indexPath) {
+            self.selectedIndexs.removeObject(indexPath)
             
         } else {
-            
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
-            
+            if self.selectedIndexs.count == 0 {
+                self.selectedIndexs.addObject(indexPath)
+            } else {
+                return
+            }
         }
-        
-        
-        self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
     // MARK: - Navigation
