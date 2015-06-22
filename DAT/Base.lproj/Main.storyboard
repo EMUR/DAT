@@ -2071,7 +2071,7 @@
         <image name="user" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b8c-he-SaI"/>
         <segue reference="ID3-Ua-SBp"/>
+        <segue reference="b8c-he-SaI"/>
     </inferredMetricsTieBreakers>
 </document>
