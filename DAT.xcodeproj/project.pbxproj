@@ -42,6 +42,7 @@
 		E78CC6EE1B29429C00F8881A /* university.csv in Resources */ = {isa = PBXBuildFile; fileRef = E78CC6ED1B29429C00F8881A /* university.csv */; };
 		E7A377041B378A07007B2EBC /* ChooseUniTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A377031B378A07007B2EBC /* ChooseUniTableViewController.swift */; };
 		E7A377061B378C21007B2EBC /* UniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A377051B378C21007B2EBC /* UniTableViewCell.swift */; };
+		E7BED4711B38CFE00062E4D6 /* courseAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BED4701B38CFE00062E4D6 /* courseAdd.swift */; };
 		E7CC557C1B325C1F002075F3 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC557B1B325C1F002075F3 /* UserObject.swift */; };
 		E7CC55821B36C8AA002075F3 /* CourseTaken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC55811B36C8AA002075F3 /* CourseTaken.swift */; };
 		E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */; };
@@ -100,6 +101,7 @@
 		E78CC6ED1B29429C00F8881A /* university.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = university.csv; sourceTree = "<group>"; };
 		E7A377031B378A07007B2EBC /* ChooseUniTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseUniTableViewController.swift; sourceTree = "<group>"; };
 		E7A377051B378C21007B2EBC /* UniTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniTableViewCell.swift; sourceTree = "<group>"; };
+		E7BED4701B38CFE00062E4D6 /* courseAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseAdd.swift; sourceTree = "<group>"; };
 		E7CC557B1B325C1F002075F3 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		E7CC55811B36C8AA002075F3 /* CourseTaken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTaken.swift; sourceTree = "<group>"; };
 		E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPA_Calculator.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				040BF9981B1D51B400713061 /* AppDelegate.swift */,
+				E7BED4701B38CFE00062E4D6 /* courseAdd.swift */,
 				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
 				E74621081B22F25F00BE4808 /* ImportCSVController.swift */,
 				E74621061B22F15C00BE4808 /* classes_short.csv */,
@@ -285,6 +288,7 @@
 				TargetAttributes = {
 					040BF9921B1D51B400713061 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 2NKLZJVG9L;
 					};
 					040BF9AA1B1D51B400713061 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -388,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BED4711B38CFE00062E4D6 /* courseAdd.swift in Sources */,
 				04BEFEE51B3888620048A329 /* SetUpViewController.swift in Sources */,
 				040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */,
 				E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */,

@@ -56,7 +56,23 @@ class IGETCAreasView: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.bounds.size.width = self.mainTable.bounds.width
 
         cell.AreaText.text = self.IGETCSections[indexPath.row]
-        cell.ClassesCount.text = "0/10"
+        var area_zone = self.IGETCSections[indexPath.row]
+        switch area_zone {
+            case "Area 1":
+                cell.ClassesCount.text = "0/10"
+            case "Area 2":
+                cell.ClassesCount.text = "0/4"
+            case "Area 3":
+                cell.ClassesCount.text = "0/12"
+            case "Area 4":
+                cell.ClassesCount.text = "0/12"
+            case "Area 5":
+                cell.ClassesCount.text = "0/9"
+            case "Area 6":
+                cell.ClassesCount.text = "0/10"
+            default:
+                cell.ClassesCount.text = "0/10"
+        }
 
         return cell
     }
