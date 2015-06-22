@@ -25,6 +25,9 @@
 		044FD02B1B338622003F5F84 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD02A1B338622003F5F84 /* SearchViewController.swift */; };
 		044FD02F1B339722003F5F84 /* ClassDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD02E1B339722003F5F84 /* ClassDetails.swift */; };
 		045399EB1B266E6000F92B0B /* blackback.png in Resources */ = {isa = PBXBuildFile; fileRef = 045399EA1B266E6000F92B0B /* blackback.png */; };
+		04BEFEE11B3873560048A329 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFEE01B3873560048A329 /* IntroViewController.swift */; };
+		04BEFEE31B387B4D0048A329 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFEE21B387B4C0048A329 /* LogoViewController.swift */; };
+		04BEFEE51B3888620048A329 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFEE41B3888620048A329 /* SetUpViewController.swift */; };
 		0A7C1CE91B2BE64600E85B00 /* ClassListViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C1CE81B2BE64600E85B00 /* ClassListViewTableViewController.swift */; };
 		0A7C1CED1B2BEA1300E85B00 /* ClassListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C1CEC1B2BEA1300E85B00 /* ClassListTableViewCell.swift */; };
 		3FA275FAC0BD5579089CADB4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D333B7E9FC28408053A8CCC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -77,6 +80,9 @@
 		044FD02A1B338622003F5F84 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		044FD02E1B339722003F5F84 /* ClassDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetails.swift; sourceTree = "<group>"; };
 		045399EA1B266E6000F92B0B /* blackback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackback.png; sourceTree = "<group>"; };
+		04BEFEE01B3873560048A329 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		04BEFEE21B387B4C0048A329 /* LogoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
+		04BEFEE41B3888620048A329 /* SetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		0A7C1CE81B2BE64600E85B00 /* ClassListViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListViewTableViewController.swift; sourceTree = "<group>"; };
 		0A7C1CEC1B2BEA1300E85B00 /* ClassListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListTableViewCell.swift; sourceTree = "<group>"; };
 		53A81178002695DB894A3014 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +167,9 @@
 				E7A377051B378C21007B2EBC /* UniTableViewCell.swift */,
 				E7A377031B378A07007B2EBC /* ChooseUniTableViewController.swift */,
 				040BF99F1B1D51B400713061 /* Main.storyboard */,
+				04BEFEE41B3888620048A329 /* SetUpViewController.swift */,
+				04BEFEE21B387B4C0048A329 /* LogoViewController.swift */,
+				04BEFEE01B3873560048A329 /* IntroViewController.swift */,
 				044FD02A1B338622003F5F84 /* SearchViewController.swift */,
 				040BF9A21B1D51B400713061 /* Images.xcassets */,
 				040BF9A41B1D51B400713061 /* LaunchScreen.xib */,
@@ -376,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BEFEE51B3888620048A329 /* SetUpViewController.swift in Sources */,
 				040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */,
 				E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */,
 				E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */,
@@ -396,6 +406,8 @@
 				044FD02B1B338622003F5F84 /* SearchViewController.swift in Sources */,
 				E7CC55821B36C8AA002075F3 /* CourseTaken.swift in Sources */,
 				040BF99C1B1D51B400713061 /* DAT.xcdatamodeld in Sources */,
+				04BEFEE11B3873560048A329 /* IntroViewController.swift in Sources */,
+				04BEFEE31B387B4D0048A329 /* LogoViewController.swift in Sources */,
 				043FA9AD1B29247900EA03EC /* Uni_List.swift in Sources */,
 				E7CC557C1B325C1F002075F3 /* UserObject.swift in Sources */,
 				043FA9791B28B1CD00EA03EC /* ChancesViewController.swift in Sources */,

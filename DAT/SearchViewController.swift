@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 
+
 class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var sections: UISegmentedControl!
     

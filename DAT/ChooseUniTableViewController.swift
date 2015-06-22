@@ -9,14 +9,19 @@
 import UIKit
 import CoreData
 
+struct Colleges
+{
+    static var name:UniObject! = nil
+}
+
 class ChooseUniTableViewController: UITableViewController {
     
     // Initialize variables
     var universities : [UniObject] = []
     var checkMark : [Bool] = []
-    var user_data : [UserObject] = []
     var selectedIndexs: NSMutableArray! = []
     
+    @IBOutlet weak var next: UIButton!
     func retrieveDBResults() {
         // Retrieve University Data
         var saveErr : NSError?
@@ -25,14 +30,13 @@ class ChooseUniTableViewController: UITableViewController {
         var fetchRequest = NSFetchRequest(entityName: "UniObject")
         universities = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
         
-        //Retrieve Database information from the user
-        var fetchUserData = NSFetchRequest(entityName: "UserObject")
-        user_data = MOC?.executeFetchRequest(fetchUserData, error: &saveErr) as [UserObject]
+       
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        next.enabled = false
+        next.setTitleColor(UIColor(white: 0.5, alpha: 1.0), forState: UIControlState.Disabled)
        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,6 +53,11 @@ class ChooseUniTableViewController: UITableViewController {
         
     }
 
+    @IBAction func GoNext(sender: AnyObject) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("SetUpViewController") as SetUpViewController
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -72,16 +81,18 @@ class ChooseUniTableViewController: UITableViewController {
         var cellObject : UniObject
         let cellIdentifier = "UniCell"
         let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier,forIndexPath: indexPath) as UniTableViewCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.contentView.alpha = 0.3
+        cell.contentView.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
 
         // Configure the cell...
         
         cellObject = self.universities[indexPath.row]
         
         if self.selectedIndexs.containsObject(indexPath) {
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            cell.contentView.alpha = 1.0
+
         } else {
-            cell.accessoryType = UITableViewCellAccessoryType.None
+            cell.contentView.alpha = 0.3
         }
         cell.uni_name?.text = cellObject.uni_name
         cell.uni_logo?.image = UIImage(named: cellObject.uni_acrn + "L")
@@ -92,10 +103,13 @@ class ChooseUniTableViewController: UITableViewController {
         
         if self.selectedIndexs.containsObject(indexPath) {
             self.selectedIndexs.removeObject(indexPath)
+            next.enabled = false
             
         } else {
             if self.selectedIndexs.count == 0 {
                 self.selectedIndexs.addObject(indexPath)
+                next.enabled = true
+                Colleges.name = self.universities[indexPath.row]
             } else {
                 return
             }

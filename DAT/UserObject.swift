@@ -14,6 +14,8 @@ class UserObject: NSManagedObject {
     // Users calculated GPA
     @NSManaged var gpa: NSNumber
     
+    @NSManaged var name: String
+    
     // University choices
     @NSManaged var uni_choice: AnyObject
     

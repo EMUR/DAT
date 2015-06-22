@@ -12,7 +12,7 @@ class UniTableViewCell: UITableViewCell {
 
     @IBOutlet weak var uni_name: UILabel!
     @IBOutlet weak var uni_logo: UIImageView!
-    
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
