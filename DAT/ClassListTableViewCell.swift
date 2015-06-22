@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SWTableViewCell
 
-class ClassListTableViewCell: UITableViewCell {
+class ClassListTableViewCell: SWTableViewCell {
 
     @IBOutlet var courseLabel: UILabel!
     @IBOutlet var courseNum: UILabel!

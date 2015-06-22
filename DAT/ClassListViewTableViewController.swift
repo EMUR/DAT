@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import SWTableViewCell
 
-class ClassListViewTableViewController: UITableViewController {
+class ClassListViewTableViewController: UITableViewController, SWTableViewCellDelegate {
 
 
     var IGETCSections = ""
@@ -81,10 +82,47 @@ class ClassListViewTableViewController: UITableViewController {
         cell.courseLabel.text = Subjects[indexPath.row].course_tle
         cell.courseNum.text = "Course Number : \(Subjects[indexPath.row].course_num)"
         cell.courseDept.text = "Department: \(Subjects[indexPath.row].department)"
-
+        cell.rightUtilityButtons = self.right()
+        cell.delegate = self
         return cell
     }
     
+    
+    func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerRightUtilityButtonWithIndex index: Int) {
+        if (index == 0)
+        {
+            let actionSheetController: UIAlertController = UIAlertController(title: "Add", message: "What was your grade?", preferredStyle: .Alert)
+            
+            //Create and add the Cancel action
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+                //Do some stuff
+            }
+            actionSheetController.addAction(cancelAction)
+            //Create and an option action
+            let nextAction: UIAlertAction = UIAlertAction(title: "Add", style: .Default) { action -> Void in
+                //Do some other stuff
+            }
+            actionSheetController.addAction(nextAction)
+            //Add a text field
+            actionSheetController.addTextFieldWithConfigurationHandler { textField -> Void in
+                //TextField configuration
+                textField.textColor = UIColor.blueColor()
+            }
+            
+            //Present the AlertController
+            self.presentViewController(actionSheetController, animated: true, completion: nil)
+            
+            cell
+        }
+    }
+    
+    func right()->NSArray
+    {
+        var rightUtilityButtons = NSMutableArray();
+        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red: CGFloat(121.0/255.0), green: CGFloat(186.0/255.0), blue: CGFloat(116.0/255.0), alpha: 1.0), title: "Add Class")
+        
+        return rightUtilityButtons
+    }
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
