@@ -7,17 +7,46 @@
 //
 
 import UIKit
+import CoreData
 
 class ChancesViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var GPA: UITextView!
     @IBOutlet weak var chance: UIView!
-
+    var memory_gpa : Double = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GPA.delegate = self
+        
+        //Retrieve Database information from the user
+        var saveErr : NSError?
+        let del = UIApplication.sharedApplication().delegate as AppDelegate!
+        let MOC = del.managedObjectContext
+        var fetchUserData = NSFetchRequest(entityName: "UserObject")
+        var user_data = MOC?.executeFetchRequest(fetchUserData, error: &saveErr) as [UserObject]
+        if user_data.count == 0 {
+            GPA.text = (gpa.usr_gpa as NSNumber).stringValue
+            memory_gpa = gpa.usr_gpa
+        } else {
+            var user_gpa = user_data[0].gpa
+            var string_gpa = user_gpa.stringValue
+            string_gpa = string_gpa.substringToIndex(advance(minElement(indices(string_gpa)), 4))
+            GPA.text = string_gpa
+            gpa.usr_gpa = (string_gpa as NSString).doubleValue
+            
+            //Maintain the original GPA in termporary 'memory'
+            memory_gpa = (string_gpa as NSString).doubleValue
+        }
         // Do any additional setup after loading the view.
     }
     
+    // When the user leaves this view, return it to student's original GPA
+    override func viewDidDisappear(animated: Bool) {
+        // Revert GPA to original value
+        gpa.usr_gpa = memory_gpa
+        GPA.text = (memory_gpa as NSNumber).stringValue
+    }
+
     func textViewDidBeginEditing(textView: UITextView) {
         textView.text = ""
     }
