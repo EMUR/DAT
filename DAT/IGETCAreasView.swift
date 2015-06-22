@@ -16,6 +16,12 @@ class IGETCAreasView: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewWillLayoutSubviews() {
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.topItem?.title = "Areas"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         IGETCSections = ["Area 1","Area 2","Area 3","Area 4","Area 5","Area 6"]

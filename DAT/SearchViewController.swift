@@ -23,7 +23,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
 
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
-        self.results.estimatedRowHeight = UITableViewAutomaticDimension
     }
     
 

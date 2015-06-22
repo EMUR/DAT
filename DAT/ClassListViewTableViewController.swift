@@ -21,6 +21,11 @@ class ClassListViewTableViewController: UITableViewController {
     }
     
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.topItem?.title = IGETCSections
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
