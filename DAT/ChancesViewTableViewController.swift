@@ -17,12 +17,21 @@ struct gpa {
 
 class ChancesViewTableViewController: UITableViewController {
 
-
     override func viewWillLayoutSubviews() {
         self.tableView.bounds.size.width = UIScreen.mainScreen().bounds.width
     }
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     
@@ -33,14 +42,19 @@ class ChancesViewTableViewController: UITableViewController {
         
     }
     
-    
+    // Given this view is primarily a subview, most operations must take place here
     override func viewDidLayoutSubviews() {
-        // Retrieve University Data
+        // Conduct DB request
         var saveErr : NSError?
         let del = UIApplication.sharedApplication().delegate as AppDelegate!
         let MOC = del.managedObjectContext
+        
+        // Retrieve University Data
         var fetchRequest = NSFetchRequest(entityName: "UniObject")
         let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
+        
+        //user_data_gpa = gpa.usr_gpa
+        
         var chance = ""
         for uni in results {
             // Find out which tag to use:
@@ -106,16 +120,6 @@ class ChancesViewTableViewController: UITableViewController {
         /*** End of Chances Caculator ***/
         
         return ""
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
