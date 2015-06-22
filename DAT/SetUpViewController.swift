@@ -19,16 +19,13 @@ class SetUpViewController: UIViewController {
         
         let managedContext = appDelegate.managedObjectContext!
         
-            let entity =  NSEntityDescription.entityForName("UserObject",
-            inManagedObjectContext:
-            managedContext)
+        let entity =  NSEntityDescription.entityForName("UserObject",inManagedObjectContext:managedContext)
         
-        let person = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext:managedContext)
+        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext) as UserObject
         
         person.setValue(Username.name, forKey: "name")
-        person.setValue(Colleges.name, forKey: "uni_choice")
-        person.setValue(3.7, forKey: "gpa")
+        person.setValue(Colleges.name.uni_acrn, forKey: "uni_choice")
+        person.setValue(3.71, forKey: "gpa")
         
         var error: NSError?
         

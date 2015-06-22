@@ -11,12 +11,13 @@ import CoreData
 
 class UserObject: NSManagedObject {
     
-    // Users calculated GPA
+    // User's calculated GPA
     @NSManaged var gpa: NSNumber
     
+    // User's name
     @NSManaged var name: String
     
-    // University choices
-    @NSManaged var uni_choice: AnyObject
+    // University choice
+    @NSManaged var uni_choice: String
     
 }
