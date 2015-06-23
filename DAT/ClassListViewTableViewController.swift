@@ -10,8 +10,11 @@ import UIKit
 import CoreData
 import SWTableViewCell
 
-class ClassListViewTableViewController: UITableViewController, SWTableViewCellDelegate {
-
+class ClassListViewTableViewController: UITableViewController, SWTableViewCellDelegate, NSCoding {
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     var IGETCSections = ""
     var Subjects = [classObject]()
@@ -89,6 +92,8 @@ class ClassListViewTableViewController: UITableViewController, SWTableViewCellDe
     
     
     func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerRightUtilityButtonWithIndex index: Int) {
+        var class_grade_i : String = ""
+        
         if (index == 0)
         {
             let actionSheetController: UIAlertController = UIAlertController(title: "Add", message: "What was your grade?", preferredStyle: .Alert)
@@ -97,12 +102,87 @@ class ClassListViewTableViewController: UITableViewController, SWTableViewCellDe
             let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
                 //Do some stuff
             }
+            
             actionSheetController.addAction(cancelAction)
             //Create and an option action
             let nextAction: UIAlertAction = UIAlertAction(title: "Add", style: .Default) { action -> Void in
-                //Do some other stuff
+                if let field = actionSheetController.textFields![0] as? UITextField {
+                    // store the data
+                    class_grade_i = field.text
+//                    var theCourse = self.Subjects[self.tableView.indexPathForCell(cell!)!.row]
+//                    var class_area_i = theCourse.igetc_area
+//                    var class_dept_i = theCourse.department
+//                    var class_number_i = theCourse.course_num
+//                    var class_units_i = (theCourse.course_unt as NSString).doubleValue
+//                    
+//                    switch class_grade_i {
+//                    case "a":
+//                        class_grade_i = "A"
+//                    case "A+":
+//                        class_grade_i = "A"
+//                    case "A-":
+//                        class_grade_i = "Am"
+//                    case "a-":
+//                        class_grade_i = "Am"
+//                    case "B+":
+//                        class_grade_i = "Bp"
+//                    case "b+":
+//                        class_grade_i = "Bp"
+//                    case "b":
+//                        class_grade_i = "B"
+//                    case "B-":
+//                        class_grade_i = "Bm"
+//                    case "b-":
+//                        class_grade_i = "Bm"
+//                    case "C+":
+//                        class_grade_i = "Cp"
+//                    case "c+":
+//                        class_grade_i = "Cp"
+//                    case "c":
+//                        class_grade_i = "C"
+//                    case "D+":
+//                        class_grade_i = "Dp"
+//                    case "d+":
+//                        class_grade_i = "Dp"
+//                    case "d":
+//                        class_grade_i = "D"
+//                    case "D-":
+//                        class_grade_i = "Dm"
+//                    case "d-":
+//                        class_grade_i = "Dm"
+//                    case "f":
+//                        class_grade_i = "F"
+//                    default:
+//                        class_grade_i = "F"
+//                    } // End of Switch
+//                    
+//                    var saveErr : NSError?
+//                    let del = UIApplication.sharedApplication().delegate as AppDelegate!
+//                    let MOC = del.managedObjectContext
+//                    var courseTaken = NSEntityDescription.insertNewObjectForEntityForName("CourseTaken", inManagedObjectContext: MOC!) as CourseTaken
+//                    
+//                    // Add the courses
+//                    courseTaken.setValue(class_area_i, forKey: "class_area")
+//                    courseTaken.setValue(class_grade_i, forKey: "class_grade")
+//                    courseTaken.setValue("1", forKey: "class_quarter")
+//                    courseTaken.setValue(class_dept_i, forKey: "class_dept")
+//                    courseTaken.setValue(class_number_i, forKey: "class_number")
+//                    courseTaken.setValue(class_units_i, forKey: "class_units")
+//                    
+//                    if MOC!.save(&saveErr) {
+//                        println("Could not save \(saveErr), \(saveErr?.description)")
+//                    } else {
+//                        println("Successfully added class!")
+//                    } // End of Save
+                    
+//                    var add_course_func = addmyCourse()
+//                    add_course_func.addCourse(class_area_i, class_grade: class_grade_i, class_quarter: "1", class_dept: class_dept_i, class_number: class_number_i, class_units: class_units_i)
+                } else {
+                    println("Failed to collect")
+                }
             }
             actionSheetController.addAction(nextAction)
+            
             //Add a text field
             actionSheetController.addTextFieldWithConfigurationHandler { textField -> Void in
                 //TextField configuration
@@ -112,9 +192,9 @@ class ClassListViewTableViewController: UITableViewController, SWTableViewCellDe
             //Present the AlertController
             self.presentViewController(actionSheetController, animated: true, completion: nil)
             
-            cell
-        }
-    }
+        } // End of If
+        
+    } // End of func
     
     func right()->NSArray
     {

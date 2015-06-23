@@ -9,7 +9,7 @@
         <attribute name="igetc_area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="igetc_suba" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="ClassTaken" representedClassName="DAT.ClassTaken" syncable="YES">
+    <entity name="CourseTaken" representedClassName="DAT.CourseTaken" syncable="YES">
         <attribute name="class_area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="class_dept" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="class_grade" optional="YES" attributeType="String" syncable="YES"/>
@@ -35,7 +35,7 @@
     </entity>
     <elements>
         <element name="ClassObject" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="ClassTaken" positionX="-27" positionY="117" width="128" height="133"/>
+        <element name="CourseTaken" positionX="-27" positionY="117" width="128" height="135"/>
         <element name="UniObject" positionX="-63" positionY="54" width="128" height="180"/>
         <element name="UserObject" positionX="-45" positionY="108" width="128" height="90"/>
     </elements>

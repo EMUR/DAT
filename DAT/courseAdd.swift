@@ -16,7 +16,7 @@ class addmyCourse {
         var saveErr : NSError?
         let del = UIApplication.sharedApplication().delegate as AppDelegate!
         let MOC = del.managedObjectContext
-        var courseTaken = NSEntityDescription.insertNewObjectForEntityForName("UserObject", inManagedObjectContext: MOC!) as CourseTaken
+        var courseTaken = NSEntityDescription.insertNewObjectForEntityForName("CourseTaken", inManagedObjectContext: MOC!) as CourseTaken
         
         // Add the courses
         courseTaken.setValue(class_area, forKey: "class_area")
@@ -26,8 +26,8 @@ class addmyCourse {
         courseTaken.setValue(class_number, forKey: "class_number")
         courseTaken.setValue(class_units, forKey: "class_units")
         
-        if MOC!.hasChanges && MOC!.save(&saveErr) {
-            NSLog("Unresolved error \(saveErr), \(saveErr!.userInfo)")
+        if MOC!.save(&saveErr) {
+            println("Could not save \(saveErr), \(saveErr?.description)")
         } else {
             println("Successfully added class!")
         } // End of Save
