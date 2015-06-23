@@ -15,18 +15,36 @@
 		040BF9B21B1D51B400713061 /* DATTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9B11B1D51B400713061 /* DATTests.swift */; };
 		040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */; };
 		040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF9F81B1FF08300713061 /* AreaCustomCell.swift */; };
-		040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040BF9F91B1FF08300713061 /* AreaCustomCell.xib */; };
 		0428AB911B22BDCB000CE23C /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0428AB901B22BDCB000CE23C /* SwiftCSV.framework */; };
 		0428AB9A1B22CBCE000CE23C /* universityProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428AB991B22CBCE000CE23C /* universityProfileView.swift */; };
+		043FA9771B28A55F00EA03EC /* ChancesViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9761B28A55F00EA03EC /* ChancesViewTableViewController.swift */; };
+		043FA9791B28B1CD00EA03EC /* ChancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9781B28B1CD00EA03EC /* ChancesViewController.swift */; };
+		043FA9AD1B29247900EA03EC /* Uni_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9AC1B29247900EA03EC /* Uni_List.swift */; };
+		043FA9B01B29276600EA03EC /* Uni_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9AE1B29276600EA03EC /* Uni_cell.swift */; };
+		043FA9B31B29450900EA03EC /* classObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA9B21B29450900EA03EC /* classObject.swift */; };
+		044FD02B1B338622003F5F84 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD02A1B338622003F5F84 /* SearchViewController.swift */; };
+		044FD02F1B339722003F5F84 /* ClassDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD02E1B339722003F5F84 /* ClassDetails.swift */; };
+		045399EB1B266E6000F92B0B /* blackback.png in Resources */ = {isa = PBXBuildFile; fileRef = 045399EA1B266E6000F92B0B /* blackback.png */; };
+		04BEFEE11B3873560048A329 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFEE01B3873560048A329 /* IntroViewController.swift */; };
+		04BEFEE31B387B4D0048A329 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFEE21B387B4C0048A329 /* LogoViewController.swift */; };
+		04BEFEE51B3888620048A329 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFEE41B3888620048A329 /* SetUpViewController.swift */; };
+		0A7C1CE91B2BE64600E85B00 /* ClassListViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C1CE81B2BE64600E85B00 /* ClassListViewTableViewController.swift */; };
+		0A7C1CED1B2BEA1300E85B00 /* ClassListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C1CEC1B2BEA1300E85B00 /* ClassListTableViewCell.swift */; };
 		3FA275FAC0BD5579089CADB4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D333B7E9FC28408053A8CCC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E73050F81B1D57D800EB7E37 /* classObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F71B1D57D800EB7E37 /* classObject.swift */; };
-		E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050F91B1D5DBD00EB7E37 /* university_data.swift */; };
+		E72FFB121B38B6D90018CF98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72FFB111B38B6D90018CF98 /* ProfileViewController.swift */; };
 		E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050FB1B1D640700EB7E37 /* grade_struct.swift */; };
 		E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73050FD1B1D64B200EB7E37 /* dept_struct.swift */; };
 		E74621011B22E74E00BE4808 /* classes.csv in Resources */ = {isa = PBXBuildFile; fileRef = E74621001B22E74E00BE4808 /* classes.csv */; };
 		E74621031B22E91100BE4808 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74621021B22E91100BE4808 /* CSV.swift */; };
 		E74621071B22F15C00BE4808 /* classes_short.csv in Resources */ = {isa = PBXBuildFile; fileRef = E74621061B22F15C00BE4808 /* classes_short.csv */; };
 		E74621091B22F25F00BE4808 /* ImportCSVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74621081B22F25F00BE4808 /* ImportCSVController.swift */; };
+		E78CC6EA1B292A7400F8881A /* UniObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78CC6E91B292A7400F8881A /* UniObject.swift */; };
+		E78CC6EE1B29429C00F8881A /* university.csv in Resources */ = {isa = PBXBuildFile; fileRef = E78CC6ED1B29429C00F8881A /* university.csv */; };
+		E7A377041B378A07007B2EBC /* ChooseUniTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A377031B378A07007B2EBC /* ChooseUniTableViewController.swift */; };
+		E7A377061B378C21007B2EBC /* UniTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A377051B378C21007B2EBC /* UniTableViewCell.swift */; };
+		E7BED4711B38CFE00062E4D6 /* courseAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BED4701B38CFE00062E4D6 /* courseAdd.swift */; };
+		E7CC557C1B325C1F002075F3 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC557B1B325C1F002075F3 /* UserObject.swift */; };
+		E7CC55821B36C8AA002075F3 /* CourseTaken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC55811B36C8AA002075F3 /* CourseTaken.swift */; };
 		E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,21 +71,39 @@
 		040BF9B11B1D51B400713061 /* DATTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATTests.swift; sourceTree = "<group>"; };
 		040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGETCAreasView.swift; sourceTree = "<group>"; };
 		040BF9F81B1FF08300713061 /* AreaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaCustomCell.swift; sourceTree = "<group>"; };
-		040BF9F91B1FF08300713061 /* AreaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaCustomCell.xib; sourceTree = "<group>"; };
 		0428AB901B22BDCB000CE23C /* SwiftCSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCSV.framework; path = "Pods/../build/Debug-iphoneos/Pods/SwiftCSV.framework"; sourceTree = "<group>"; };
 		0428AB941B22BF47000CE23C /* DAT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DAT-Bridging-Header.h"; sourceTree = "<group>"; };
 		0428AB991B22CBCE000CE23C /* universityProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = universityProfileView.swift; sourceTree = "<group>"; };
+		043FA9761B28A55F00EA03EC /* ChancesViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChancesViewTableViewController.swift; sourceTree = "<group>"; };
+		043FA9781B28B1CD00EA03EC /* ChancesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChancesViewController.swift; sourceTree = "<group>"; };
+		043FA9AC1B29247900EA03EC /* Uni_List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uni_List.swift; sourceTree = "<group>"; };
+		043FA9AE1B29276600EA03EC /* Uni_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uni_cell.swift; sourceTree = "<group>"; };
+		043FA9B21B29450900EA03EC /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
+		044FD02A1B338622003F5F84 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		044FD02E1B339722003F5F84 /* ClassDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetails.swift; sourceTree = "<group>"; };
+		045399EA1B266E6000F92B0B /* blackback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackback.png; sourceTree = "<group>"; };
+		04BEFEE01B3873560048A329 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		04BEFEE21B387B4C0048A329 /* LogoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
+		04BEFEE41B3888620048A329 /* SetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		0A7C1CE81B2BE64600E85B00 /* ClassListViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListViewTableViewController.swift; sourceTree = "<group>"; };
+		0A7C1CEC1B2BEA1300E85B00 /* ClassListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListTableViewCell.swift; sourceTree = "<group>"; };
 		53A81178002695DB894A3014 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D333B7E9FC28408053A8CCC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4728E1641DBBFAD941781FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E73050F71B1D57D800EB7E37 /* classObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classObject.swift; sourceTree = "<group>"; };
-		E73050F91B1D5DBD00EB7E37 /* university_data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = university_data.swift; sourceTree = "<group>"; };
+		E72FFB111B38B6D90018CF98 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E73050FB1B1D640700EB7E37 /* grade_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grade_struct.swift; sourceTree = "<group>"; };
 		E73050FD1B1D64B200EB7E37 /* dept_struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dept_struct.swift; sourceTree = "<group>"; };
 		E74621001B22E74E00BE4808 /* classes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.csv; sourceTree = "<group>"; };
 		E74621021B22E91100BE4808 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = Pods/SwiftCSV/SwiftCSV/CSV.swift; sourceTree = "<group>"; };
 		E74621061B22F15C00BE4808 /* classes_short.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes_short.csv; sourceTree = "<group>"; };
 		E74621081B22F25F00BE4808 /* ImportCSVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCSVController.swift; sourceTree = "<group>"; };
+		E78CC6E91B292A7400F8881A /* UniObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniObject.swift; sourceTree = "<group>"; };
+		E78CC6ED1B29429C00F8881A /* university.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = university.csv; sourceTree = "<group>"; };
+		E7A377031B378A07007B2EBC /* ChooseUniTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseUniTableViewController.swift; sourceTree = "<group>"; };
+		E7A377051B378C21007B2EBC /* UniTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniTableViewCell.swift; sourceTree = "<group>"; };
+		E7BED4701B38CFE00062E4D6 /* courseAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseAdd.swift; sourceTree = "<group>"; };
+		E7CC557B1B325C1F002075F3 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		E7CC55811B36C8AA002075F3 /* CourseTaken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTaken.swift; sourceTree = "<group>"; };
 		E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPA_Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,22 +152,40 @@
 			isa = PBXGroup;
 			children = (
 				040BF9981B1D51B400713061 /* AppDelegate.swift */,
+				E7BED4701B38CFE00062E4D6 /* courseAdd.swift */,
 				E7E99D931B204F6C0050F8CB /* GPA_Calculator.swift */,
 				E74621081B22F25F00BE4808 /* ImportCSVController.swift */,
 				E74621061B22F15C00BE4808 /* classes_short.csv */,
+				E78CC6ED1B29429C00F8881A /* university.csv */,
 				E74621001B22E74E00BE4808 /* classes.csv */,
 				040BF9F61B1FEDA300713061 /* IGETCAreasView.swift */,
-				040BF99F1B1D51B400713061 /* Main.storyboard */,
+				0A7C1CEC1B2BEA1300E85B00 /* ClassListTableViewCell.swift */,
+				0A7C1CE81B2BE64600E85B00 /* ClassListViewTableViewController.swift */,
+				044FD02E1B339722003F5F84 /* ClassDetails.swift */,
 				040BF9F81B1FF08300713061 /* AreaCustomCell.swift */,
-				040BF9F91B1FF08300713061 /* AreaCustomCell.xib */,
+				043FA9AE1B29276600EA03EC /* Uni_cell.swift */,
+				043FA9AC1B29247900EA03EC /* Uni_List.swift */,
+				0428AB991B22CBCE000CE23C /* universityProfileView.swift */,
+				043FA9761B28A55F00EA03EC /* ChancesViewTableViewController.swift */,
+				043FA9781B28B1CD00EA03EC /* ChancesViewController.swift */,
+				045399EA1B266E6000F92B0B /* blackback.png */,
+				E7A377051B378C21007B2EBC /* UniTableViewCell.swift */,
+				E7A377031B378A07007B2EBC /* ChooseUniTableViewController.swift */,
+				E72FFB111B38B6D90018CF98 /* ProfileViewController.swift */,
+				040BF99F1B1D51B400713061 /* Main.storyboard */,
+				04BEFEE41B3888620048A329 /* SetUpViewController.swift */,
+				04BEFEE21B387B4C0048A329 /* LogoViewController.swift */,
+				04BEFEE01B3873560048A329 /* IntroViewController.swift */,
+				044FD02A1B338622003F5F84 /* SearchViewController.swift */,
 				040BF9A21B1D51B400713061 /* Images.xcassets */,
 				040BF9A41B1D51B400713061 /* LaunchScreen.xib */,
-				E73050F71B1D57D800EB7E37 /* classObject.swift */,
-				0428AB991B22CBCE000CE23C /* universityProfileView.swift */,
-				E73050F91B1D5DBD00EB7E37 /* university_data.swift */,
 				E73050FB1B1D640700EB7E37 /* grade_struct.swift */,
 				E73050FD1B1D64B200EB7E37 /* dept_struct.swift */,
 				040BF99A1B1D51B400713061 /* DAT.xcdatamodeld */,
+				E7CC55811B36C8AA002075F3 /* CourseTaken.swift */,
+				E7CC557B1B325C1F002075F3 /* UserObject.swift */,
+				043FA9B21B29450900EA03EC /* classObject.swift */,
+				E78CC6E91B292A7400F8881A /* UniObject.swift */,
 				040BF9961B1D51B400713061 /* Supporting Files */,
 			);
 			path = DAT;
@@ -228,11 +282,13 @@
 		040BF98B1B1D51B400713061 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Eyad_Neesha_Adeeb_Ehab;
 				TargetAttributes = {
 					040BF9921B1D51B400713061 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 2NKLZJVG9L;
 					};
 					040BF9AA1B1D51B400713061 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -264,12 +320,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045399EB1B266E6000F92B0B /* blackback.png in Resources */,
 				040BF9A11B1D51B400713061 /* Main.storyboard in Resources */,
+				E78CC6EE1B29429C00F8881A /* university.csv in Resources */,
 				040BF9A61B1D51B400713061 /* LaunchScreen.xib in Resources */,
 				E74621071B22F15C00BE4808 /* classes_short.csv in Resources */,
 				E74621011B22E74E00BE4808 /* classes.csv in Resources */,
 				040BF9A31B1D51B400713061 /* Images.xcassets in Resources */,
-				040BF9FB1B1FF08300713061 /* AreaCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,17 +392,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E73050F81B1D57D800EB7E37 /* classObject.swift in Sources */,
+				E7BED4711B38CFE00062E4D6 /* courseAdd.swift in Sources */,
+				04BEFEE51B3888620048A329 /* SetUpViewController.swift in Sources */,
 				040BF9F71B1FEDA300713061 /* IGETCAreasView.swift in Sources */,
 				E73050FC1B1D640700EB7E37 /* grade_struct.swift in Sources */,
 				E7E99D941B204F6C0050F8CB /* GPA_Calculator.swift in Sources */,
 				E74621091B22F25F00BE4808 /* ImportCSVController.swift in Sources */,
+				0A7C1CE91B2BE64600E85B00 /* ClassListViewTableViewController.swift in Sources */,
+				043FA9B01B29276600EA03EC /* Uni_cell.swift in Sources */,
 				E73050FE1B1D64B200EB7E37 /* dept_struct.swift in Sources */,
-				E73050FA1B1D5DBD00EB7E37 /* university_data.swift in Sources */,
+				043FA9771B28A55F00EA03EC /* ChancesViewTableViewController.swift in Sources */,
+				E78CC6EA1B292A7400F8881A /* UniObject.swift in Sources */,
 				0428AB9A1B22CBCE000CE23C /* universityProfileView.swift in Sources */,
+				0A7C1CED1B2BEA1300E85B00 /* ClassListTableViewCell.swift in Sources */,
+				044FD02F1B339722003F5F84 /* ClassDetails.swift in Sources */,
+				E7A377041B378A07007B2EBC /* ChooseUniTableViewController.swift in Sources */,
+				043FA9B31B29450900EA03EC /* classObject.swift in Sources */,
 				040BF9991B1D51B400713061 /* AppDelegate.swift in Sources */,
+				E7A377061B378C21007B2EBC /* UniTableViewCell.swift in Sources */,
 				040BF9FA1B1FF08300713061 /* AreaCustomCell.swift in Sources */,
+				E72FFB121B38B6D90018CF98 /* ProfileViewController.swift in Sources */,
+				044FD02B1B338622003F5F84 /* SearchViewController.swift in Sources */,
+				E7CC55821B36C8AA002075F3 /* CourseTaken.swift in Sources */,
 				040BF99C1B1D51B400713061 /* DAT.xcdatamodeld in Sources */,
+				04BEFEE11B3873560048A329 /* IntroViewController.swift in Sources */,
+				04BEFEE31B387B4D0048A329 /* LogoViewController.swift in Sources */,
+				043FA9AD1B29247900EA03EC /* Uni_List.swift in Sources */,
+				E7CC557C1B325C1F002075F3 /* UserObject.swift in Sources */,
+				043FA9791B28B1CD00EA03EC /* ChancesViewController.swift in Sources */,
 				E74621031B22E91100BE4808 /* CSV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

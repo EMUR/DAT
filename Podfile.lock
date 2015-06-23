@@ -1,10 +1,13 @@
 PODS:
-  - SwiftCSV (0.1.1)
+  - SwiftCSV (0.1.2)
+  - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
   - SwiftCSV
+  - SWTableViewCell
 
 SPEC CHECKSUMS:
-  SwiftCSV: 88dc3c170918fddf9f37ca3a2a1beb55d09d02f7
+  SwiftCSV: 02827538421b00b5af3fba80ed32f8918554c757
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
 COCOAPODS: 0.37.2

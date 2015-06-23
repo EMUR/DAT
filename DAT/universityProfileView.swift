@@ -8,28 +8,97 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class universityProfileView: UITableViewController {
     @IBOutlet weak var uni_background: UIImageView!
-    @IBOutlet weak var uni_weblink: UIButton!
     @IBOutlet weak var uni_desc: UITextView!
+    @IBOutlet weak var uni_city: UILabel!
     @IBOutlet weak var uni_rank: UILabel!
     @IBOutlet weak var uni_avgpa: UILabel!
+    @IBOutlet weak var uni_logo: UIImageView!
+    var expanded = false
+    var cellH : CGFloat = 60.0
+    
     @IBOutlet var uni_map: MKMapView!
     
-    //GEO CODE PURPOSES
+    var results : [UniObject] = []
+    
+    //For Geo code purposes
     var university_name : String!
     var coords: CLLocationCoordinate2D?
+    
+    override func viewWillLayoutSubviews() {
+        self.tableView.backgroundColor = UIColor.clearColor()
+    }
+    
+    //For DB purposes
+    var university_acronym : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        tableView.rowHeight = UITableViewAutomaticDimension
+        /* Conduct DB request */
         
-        // START GEO DATA PARSER
+        self.uni_desc.setContentOffset(CGPoint(x: 100, y: 100), animated: true)
+        // Create Request
+        var request = NSFetchRequest(entityName: "UniObject")
+        request.returnsObjectsAsFaults = false;
+        
+        // Set SQL WHERE command
+        let resultsPredicate = NSPredicate(format: "uni_acrn = %@", university_acronym)
+        request.predicate = resultsPredicate
+        
+        // Build Delegate and App
+        let del = UIApplication.sharedApplication().delegate as AppDelegate!
+        let MOC = del.managedObjectContext
+        var saveErr : NSError?
+        results = MOC?.executeFetchRequest(request, error: &saveErr) as [UniObject]
+        
+        /* End DB request */
+        
+        
+        /* Feed data points */
+        
+        // Get the image of the university
+        uni_logo.image  = UIImage(named: university_acronym + "L")
+        
+        // Get the description of the university, and clean it up
+        var university_info = results[0].uni_desc
+        university_info = dropFirst(university_info)
+        university_info = dropLast(university_info)
+        university_info = university_info.stringByReplacingOccurrencesOfString("\\n", withString: "\n \n")
+        university_info = university_info.stringByReplacingOccurrencesOfString("\"\"", withString: "\"")
+        uni_desc.text = university_info
+        
+        // Get university rank
+        uni_rank.text = results[0].uni_rank
+        
+        // Get university Average GPA
+        uni_avgpa.text = "\(results[0].uni_agpa)"
+        
+        // Get university URL/website
+        var url_link = results[0].uni_urla
+        
+        // Get city name only
+        var uc_title  = "University of California - "
+        
+        // Trim university title to city only
+        var uc_t_size = distance(uc_title.startIndex, uc_title.endIndex)
+        var uc_name  = results[0].uni_name
+        uni_city.text = uc_name.substringFromIndex(advance(minElement(indices(uc_name)), uc_t_size))
+        
+        /* End feed data points */
+        
+        /* START GEO DATA PARSER */
         
         let geoCoder = CLGeocoder()
-        university_name = "University of California, Berkeley"
-        //var address = "\(university_name), California, United States of America"
-        var address = "University of California - Berkeley, California, USA"
+        university_name = results[0].uni_name
+        var address = "\(university_name), California, United States of America"
+        //var address = "University of California - Berkeley, California, USA
+        
+        uni_map.mapType = MKMapType.Satellite
         
         geoCoder.geocodeAddressString(address,
             completionHandler:
@@ -39,6 +108,7 @@ class universityProfileView: UITableViewController {
                     println("Geocode failed with error: \(error.localizedDescription)")
                 }
                 
+                // Did it find any location?
                 if placemarks.count > 0 {
                     let placemark = placemarks[0] as CLPlacemark
                     let location = placemark.location
@@ -51,11 +121,13 @@ class universityProfileView: UITableViewController {
                     longitude: self.coords!.longitude
                 )
                 
-                let span = MKCoordinateSpanMake(0.5/69.0, 0.5/69.0) // 1 degree is approx 69 miles. Therefore, 0.5mile x 0.5mile map, then the value is 0.5/69
+                let span = MKCoordinateSpanMake(1/69.0, 1/69.0) // 1 degree is approx 69 miles. Therefore, 0.5mile x 0.5mile map, then the value is 0.5/69
                 let region = MKCoordinateRegion(center: location, span: span)
-                self.uni_map.setRegion(region, animated: true)
+                self.uni_map.setRegion(region, animated: false)
                 
         })
+        
+
         
         // END GEO DATA PARSER
 
@@ -66,22 +138,39 @@ class universityProfileView: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    @IBAction func uni_weblink(sender: AnyObject) {
+        if let url = NSURL(string: results[0].uni_urla) {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return UITableViewAutomaticDimension
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y < -100.0)
+        {
 
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                 self.tableView.transform = CGAffineTransformTranslate(self.tableView.transform, 0.0, self.tableView.bounds.height - 100.0)
+                }, completion: { (done:Bool) -> Void in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+            })
+            
+
+        }
+    }
     // MARK: - Table view data source
 
-     /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.

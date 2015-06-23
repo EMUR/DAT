@@ -8,17 +8,26 @@
 
 import UIKit
 
-class IGETCAreasView: UITableViewController {
+class IGETCAreasView: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var mainTable: UITableView!
 
     var IGETCSections = [String]()
+
+    override func viewWillLayoutSubviews() {
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.topItem?.title = "Areas"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         IGETCSections = ["Area 1","Area 2","Area 3","Area 4","Area 5","Area 6"]
-        var nib = UINib(nibName: "AreaCustomCell", bundle: nil)
         
-        tableView.registerNib(nib, forCellReuseIdentifier: "AreaCell")
-       
+        self.mainTable.delegate = self
+        self.mainTable.dataSource = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,28 +42,60 @@ class IGETCAreasView: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
-    }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return IGETCSections.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AreaCell", forIndexPath: indexPath) as AreaCustomCell
         
-        cell.bounds.size.width = self.tableView.bounds.width
+        cell.bounds.size.width = self.mainTable.bounds.width
 
         cell.AreaText.text = self.IGETCSections[indexPath.row]
-        cell.ClassesCount.text = "0/10"
+        var area_zone = self.IGETCSections[indexPath.row]
+        switch area_zone {
+            case "Area 1":
+                cell.ClassesCount.text = "0/10"
+            case "Area 2":
+                cell.ClassesCount.text = "0/4"
+            case "Area 3":
+                cell.ClassesCount.text = "0/12"
+            case "Area 4":
+                cell.ClassesCount.text = "0/12"
+            case "Area 5":
+                cell.ClassesCount.text = "0/9"
+            case "Area 6":
+                cell.ClassesCount.text = "0/10"
+            default:
+                cell.ClassesCount.text = "0/10"
+        }
 
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("Details", sender: self)
+        self.mainTable.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+    
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "Details") {
+        
+            var segueObject : classObject
+            var indPath : NSIndexPath
+
+            let classViewController = segue.destinationViewController as ClassListViewTableViewController
+            indPath = self.mainTable.indexPathForSelectedRow()!
+            classViewController.IGETCSections = self.IGETCSections[indPath.row]
+            
+         //classViewController.courseLabel = segueObject.course_tle
+            
+            
+        }
     }
 
 

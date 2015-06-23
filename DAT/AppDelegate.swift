@@ -15,7 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
         // Override point for customization after application launch.
+        var saveErr : NSError?
+        let del = UIApplication.sharedApplication().delegate as AppDelegate!
+        let MOC = del.managedObjectContext
+        var fetchRequest = NSFetchRequest(entityName: "UniObject")
+        let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
+        if results.count == 0 {
+            import_data_course()
+            import_data_uni()
+        } else {
+            println("Database Active!")
+        }
+        
         return true
     }
 
@@ -104,6 +117,181 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 abort()
             }
         }
+    }
+    
+    func import_data_course() {
+        
+        var urlpath_c  = NSBundle.mainBundle().pathForResource("classes", ofType: "csv")
+        
+        // IMPORT ALL COURSES
+        if let csvURL:NSURL = NSURL.fileURLWithPath(urlpath_c!) {
+            
+            var error: NSErrorPointer = nil
+            
+            if let csv = CSV(contentsOfURL: csvURL, error: error) {
+                
+                // Rows
+                let rows = csv.rows.count
+                var headers = csv.headers  //=> Shows the headers
+                
+                // Columns
+                let columns = csv.columns
+                let names = csv.columns["title"]  //=> [lists all class titles in an array]
+                
+                var line = csv.rows[0]      //=> [title: Composition and Reading, sub_area: A, description: Introduction to university level reading and writing❤️ with an emphasis on analysis. Close examination of a variety of texts (personal❤️ popular❤️ literary❤️ professional❤️ academic) from culturally diverse traditions. Practice in common rhetorical strategies used in academic writing. Composition of clear❤️ well-organized❤️ and well-developed essays❤️ with varying purposes and differing audiences❤️ from personal to academic., area: 1, course_num: 1A, dept: EWRT, units: 5]
+                
+                /*
+                WHY THE HEARTS?
+                Comma-separated value files do not have a set standard, and the file gets breaken down wherever a comma exists. The ❤️ is merely used to replace in text commas from the .CSV file, and it will later be substituted to a comma after it is collected
+                */
+                
+                // Start the collection process
+                
+                var saveErr : NSError?
+                
+                // Variables
+                let del = UIApplication.sharedApplication().delegate as AppDelegate!
+                
+                let MOC = del.managedObjectContext
+                
+                var fetchRequest = NSFetchRequest(entityName: "ClassObject")
+                
+                let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [classObject]
+                
+                
+                if results.count == 0
+                {
+                    for i in 0...rows - 1 {
+                        
+                        var courses = NSEntityDescription.insertNewObjectForEntityForName("ClassObject", inManagedObjectContext: MOC!) as classObject
+                        
+                        // Get course area
+                        courses.setValue(csv.rows[i]["area"]!, forKey: "igetc_area")
+                        
+                        // Get course sub-area
+                        courses.setValue(csv.rows[i]["sub_area"]!, forKey: "igetc_suba")
+                        
+                        // Get course department
+                        courses.setValue(csv.rows[i]["dept"]!, forKey: "department")
+                        
+                        // Get course number
+                        courses.setValue(csv.rows[i]["course_num"]!, forKey: "course_num")
+                        
+                        // Get course title
+                        let course_title = csv.rows[i]["title"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        courses.setValue(course_title, forKey: "course_tle")
+                        
+                        // Get course description
+                        var course_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        var course_des_string = course_description as NSString
+                        var des_size = course_des_string.length
+                        var last = Array(course_description)[des_size - 1]
+                        
+                        if String(last) != "." {
+                            course_description = course_description + "."
+                        }
+                        
+                        courses.setValue(course_description, forKey: "course_des")
+                        
+                        // Get course units
+                        courses.setValue(csv.rows[i]["units"]!, forKey: "course_unt")
+                        
+                    }
+                    // Save
+                    saveContext(MOC!)
+                }
+                
+            } // End of CSVBuild
+            
+        } // End of CSVPath for courses
+        
+    } //End import courses
+    
+    func import_data_uni() {
+        
+        var urlpath_u  = NSBundle.mainBundle().pathForResource("university", ofType: "csv")
+        
+        // IMPORT ALL UNIVERSITIES
+        if let csvURL:NSURL = NSURL.fileURLWithPath(urlpath_u!) {
+            
+            var error: NSErrorPointer = nil
+            
+            if let csv = CSV(contentsOfURL: csvURL, error: error) {
+                
+                // Rows
+                let rows = csv.rows.count
+                
+                // Start the collection process
+                
+                var saveErr : NSError?
+                
+                // Variables
+                let del = UIApplication.sharedApplication().delegate as AppDelegate!
+                
+                let MOC = del.managedObjectContext
+                
+                var fetchRequest = NSFetchRequest(entityName: "UniObject")
+                
+                let results = MOC?.executeFetchRequest(fetchRequest, error: &saveErr) as [UniObject]
+                
+                
+                if results.count == 0
+                {
+                    for i in 0...rows - 1 {
+                        
+                        var university = NSEntityDescription.insertNewObjectForEntityForName("UniObject", inManagedObjectContext: MOC!) as UniObject
+                        
+                        // Get university name
+                        university.setValue(csv.rows[i]["name"]!, forKey: "uni_name")
+                        
+                        // Get university acronym
+                        university.setValue(csv.rows[i]["acronym"]!, forKey: "uni_acrn")
+                        
+                        // Get university founding year
+                        university.setValue(csv.rows[i]["year_founded"]!, forKey: "uni_year")
+                        
+                        // Get university adminssion rate
+                        university.setValue((csv.rows[i]["transfer_admission_rate"]! as NSString).doubleValue, forKey: "uni_admn")
+                        
+                        // Get university description
+                        let university_description = csv.rows[i]["description"]!.stringByReplacingOccurrencesOfString("❤️", withString: ",", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        university.setValue(university_description, forKey: "uni_desc")
+                        
+                        // Get university rank
+                        university.setValue(csv.rows[i]["us_rank"]!, forKey: "uni_rank")
+                        
+                        // Get university average transfer gpa
+                        university.setValue((csv.rows[i]["average_gpa"]! as NSString).doubleValue, forKey: "uni_agpa")
+                        
+                        // Get university web address
+                        university.setValue(csv.rows[i]["web_address"]!, forKey: "uni_urla")
+                        
+                        //Apply default course taken
+                        university.setValue(csv.rows[i]["assist"]!, forKey: "uni_asst")
+                    }
+                    
+                    // Save
+                    saveContext(MOC!)
+                    
+                }
+                
+            } // End of CSVBuild
+            
+        } // End of CSVPath for universities
+        
+    } // End of Func
+    
+    func saveContext (moc : NSManagedObjectContext) {
+        var error: NSError? = nil
+        if moc.hasChanges && !moc.save(&error) {
+            NSLog("Unresolved error \(error), \(error!.userInfo)")
+        }
+    }
+    
+    func load_data(myMOC: NSManagedObjectContext) -> [classObject] {
+        let fetchRequest = NSFetchRequest(entityName:"ClassObject")
+        let fetchedResults = myMOC.executeFetchRequest(fetchRequest,error: nil) as [classObject]
+        return fetchedResults
     }
 
 }

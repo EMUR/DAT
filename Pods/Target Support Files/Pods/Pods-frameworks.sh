@@ -48,8 +48,10 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'SWTableViewCell.framework'
   install_framework 'SwiftCSV.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'SWTableViewCell.framework'
   install_framework 'SwiftCSV.framework'
 fi
